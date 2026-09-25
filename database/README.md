@@ -16,9 +16,16 @@ This repository contains the complete **Unified Database Architecture, DDL SQL S
 
 ---
 
-## 🚀 Quick Deployment Guide
+## 🚀 Deployment & Active Connection
 
-### Option 1: Standalone PostgreSQL (`psql`)
+### Option 1: Built-in Native Persistent Engine (Active Out-of-the-Box)
+The application now includes an embedded, zero-dependency persistent relational engine:
+- **Database File**: `database/grambandhan.db` (Managed via `backend/db.mjs`)
+- **Status API**: `http://localhost:3001/api/v1/database/status`
+- **Tables API**: `http://localhost:3001/api/v1/database/tables`
+- **Admin Visual Inspector**: Open `Admin/admin.html#/database` to view live tables, row counts, and data.
+
+### Option 2: Standalone PostgreSQL (`psql`)
 ```bash
 # 1. Connect to PostgreSQL
 psql -U postgres
@@ -31,7 +38,7 @@ CREATE DATABASE grambandhan;
 psql -U postgres -d grambandhan -f grambandhan_unified_schema.sql
 ```
 
-### Option 2: Using Prisma ORM
+### Option 3: Using Prisma ORM
 ```bash
 # 1. Install Prisma
 npm install prisma @prisma/client

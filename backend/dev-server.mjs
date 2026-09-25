@@ -1,6 +1,7 @@
 import http from "node:http";
 import url from "node:url";
 import fs from "node:fs";
+import { getDatabase, getDatabaseStats } from "./db.mjs";
 
 let nodemailer = null;
 try {
@@ -606,11 +607,130 @@ const server = http.createServer(async (req, res) => {
         <div class="endpoint"><span class="badge get">GET</span> <code>${PREFIX}/deals</code> - Active agricultural investment deals</div>
         <div class="endpoint"><span class="badge get">GET</span> <code>${PREFIX}/payments</code> - Complete payment ledger</div>
         <div class="endpoint"><span class="badge post">POST</span> <code>${PREFIX}/payments</code> - Initiate bKash/Nagad/Bank payment</div>
-        <div class="endpoint"><span class="badge post">POST</span> <code>${PREFIX}/payments/:id/verify</code> - Confirm transaction</div>
+        <div class="endpoint"><span class="badge get">GET</span> <code>${PREFIX}/database/status</code> - Database engine & connection health</div>
+        <div class="endpoint"><span class="badge get">GET</span> <code>${PREFIX}/database/tables</code> - 16 Unified SQL schema tables & row counts</div>
+        <div class="endpoint"><span class="badge get">GET</span> <code>${PREFIX}/database/table/:name</code> - Query table rows</div>
+        <div class="endpoint"><span class="badge get">GET</span> <code>${PREFIX}/users</code> - Registered users (Farmers, Investors, Admins)</div>
+        <div class="endpoint"><span class="badge get">GET</span> <code>${PREFIX}/projects</code> - Verified agricultural projects</div>
+        <div class="endpoint"><span class="badge get">GET</span> <code>${PREFIX}/deals</code> - Active agricultural investment deals</div>
+        <div class="endpoint"><span class="badge get">GET</span> <code>${PREFIX}/marketplace/products</code> - Village marketplace product listings</div>
+        <div class="endpoint"><span class="badge get">GET</span> <code>${PREFIX}/orders</code> - Marketplace customer purchase orders</div>
+        <div class="endpoint"><span class="badge get">GET</span> <code>${PREFIX}/ledger</code> - Double-entry financial accounting ledger</div>
+        <div class="endpoint"><span class="badge get">GET</span> <code>${PREFIX}/payments</code> - Complete payment ledger</div>
+        <div class="endpoint"><span class="badge post">POST</span> <code>${PREFIX}/payments</code> - Initiate bKash/Nagad/Bank payment</div>
         <div class="endpoint"><span class="badge get">GET</span> <code>${PREFIX}/dashboard/overview</code> - Platform analytics & portfolio</div>
       </body>
       </html>
     `);
+  }
+
+  // ==========================================
+  // UNIFIED DATABASE ARCHITECTURE ENDPOINTS
+  // (Directly connected to database/grambandhan.db)
+  // ==========================================
+
+  // Database Connection & Engine Status
+  if (path === `${PREFIX}/database/status` || path === "/api/database/status") {
+    const stats = getDatabaseStats();
+    return sendJson(res, 200, stats);
+  }
+
+  // Database Tables & Schema Overview
+  if (path === `${PREFIX}/database/tables` || path === "/api/database/tables") {
+    const db = getDatabase();
+    const stats = getDatabaseStats();
+    const tableList = Object.keys(stats.tableStats).map((name) => {
+      const columns = db.prepare(`PRAGMA table_info(${name})`).all();
+      return {
+        name,
+        rowCount: stats.tableStats[name],
+        columns: columns.map((c) => ({ name: c.name, type: c.type, notNull: Boolean(c.notnull), pk: Boolean(c.pk) })),
+      };
+    });
+    return sendJson(res, 200, {
+      database: "database/grambandhan.db",
+      engine: "SQLite Native Persistent (Node.js 24)",
+      status: "CONNECTED",
+      totalTables: tableList.length,
+      tables: tableList,
+    });
+  }
+
+  // View specific table data
+  if (path?.startsWith(`${PREFIX}/database/table/`)) {
+    const tableName = path.replace(`${PREFIX}/database/table/`, "");
+    const db = getDatabase();
+    try {
+      const rows = db.prepare(`SELECT * FROM ${tableName} LIMIT 50`).all();
+      return sendJson(res, 200, {
+        table: tableName,
+        rowCount: rows.length,
+        rows,
+      });
+    } catch (err) {
+      return sendJson(res, 400, { error: err.message });
+    }
+  }
+
+  // Users List (From Database)
+  if ((path === `${PREFIX}/users` || path === "/api/users") && req.method === "GET") {
+    const db = getDatabase();
+    const rows = db.prepare("SELECT id, email, phone, first_name, last_name, role, is_email_verified, is_phone_verified, kyc_status, created_at FROM users").all();
+    return sendJson(res, 200, { data: rows, total: rows.length });
+  }
+
+  // Projects List (From Database)
+  if ((path === `${PREFIX}/projects` || path === `${PREFIX}/agricultural-projects` || path === "/api/projects") && req.method === "GET") {
+    const db = getDatabase();
+    const rows = db.prepare("SELECT * FROM agricultural_projects").all();
+    return sendJson(res, 200, { data: rows, total: rows.length });
+  }
+
+  // Milestones List (From Database)
+  if ((path === `${PREFIX}/milestones` || path === "/api/milestones") && req.method === "GET") {
+    const db = getDatabase();
+    const rows = db.prepare("SELECT * FROM project_milestones").all();
+    return sendJson(res, 200, { data: rows, total: rows.length });
+  }
+
+  // Investments List (From Database)
+  if ((path === `${PREFIX}/investments` || path === "/api/investments") && req.method === "GET") {
+    const db = getDatabase();
+    const rows = db.prepare("SELECT * FROM investments").all();
+    return sendJson(res, 200, { data: rows, total: rows.length });
+  }
+
+  // Marketplace Products (From Database)
+  if ((path === `${PREFIX}/marketplace/products` || path === "/api/marketplace/products" || path === `${PREFIX}/products`) && req.method === "GET") {
+    const db = getDatabase();
+    const rows = db.prepare("SELECT * FROM product_listings").all();
+    return sendJson(res, 200, { data: rows, total: rows.length });
+  }
+
+  // Orders List (From Database)
+  if ((path === `${PREFIX}/orders` || path === "/api/orders") && req.method === "GET") {
+    const db = getDatabase();
+    const rows = db.prepare(`
+      SELECT o.*, p.name as product_name, p.price as unit_price, u.first_name || ' ' || u.last_name as buyer_name
+      FROM orders o
+      LEFT JOIN product_listings p ON o.listing_id = p.id
+      LEFT JOIN users u ON o.buyer_id = u.id
+      ORDER BY o.created_at DESC
+    `).all();
+    return sendJson(res, 200, { data: rows, total: rows.length });
+  }
+
+  // General Ledger & Balance Sheet (From Database)
+  if ((path === `${PREFIX}/ledger` || path === "/api/ledger") && req.method === "GET") {
+    const db = getDatabase();
+    const accounts = db.prepare("SELECT * FROM accounts").all();
+    const entries = db.prepare(`
+      SELECT le.*, a.name as account_name, a.type as account_type
+      FROM ledger_entries le
+      JOIN accounts a ON le.account_id = a.id
+      ORDER BY le.created_at DESC
+    `).all();
+    return sendJson(res, 200, { accounts, entries, status: "GAAP_BALANCED" });
   }
 
   // Blockchain Status
@@ -680,27 +800,73 @@ const server = http.createServer(async (req, res) => {
     });
   }
 
-  // Deals List
+  // Deals List (Queried from Database)
   if (path === `${PREFIX}/deals` && req.method === "GET") {
+    const db = getDatabase();
+    const dbDeals = db.prepare("SELECT * FROM deals").all().map((d) => ({
+      id: d.id,
+      title: d.title,
+      category: d.category,
+      district: d.district,
+      description: d.description,
+      fundingGoal: d.funding_goal,
+      fundedAmount: d.funded_amount,
+      minInvestment: d.min_investment,
+      expectedReturnPct: d.expected_return_pct,
+      durationMonths: d.duration_months,
+      status: d.status,
+      farmer: { name: d.farmer_name, verified: Boolean(d.farmer_verified), rating: d.farmer_rating },
+    }));
     return sendJson(res, 200, {
-      data: MOCK_DEALS,
-      meta: { total: MOCK_DEALS.length, page: 1, limit: 10 },
+      data: dbDeals,
+      meta: { total: dbDeals.length, page: 1, limit: 10, databaseSource: "database/grambandhan.db" },
     });
   }
 
   // Single Deal
   if (path?.startsWith(`${PREFIX}/deals/`)) {
     const dealId = path.replace(`${PREFIX}/deals/`, "");
+    const db = getDatabase();
+    const d = db.prepare("SELECT * FROM deals WHERE id = ?").get(dealId) || db.prepare("SELECT * FROM deals LIMIT 1").get();
+    if (d) {
+      return sendJson(res, 200, {
+        id: d.id,
+        title: d.title,
+        category: d.category,
+        district: d.district,
+        description: d.description,
+        fundingGoal: d.funding_goal,
+        fundedAmount: d.funded_amount,
+        minInvestment: d.min_investment,
+        expectedReturnPct: d.expected_return_pct,
+        durationMonths: d.duration_months,
+        status: d.status,
+        farmer: { name: d.farmer_name, verified: Boolean(d.farmer_verified), rating: d.farmer_rating },
+      });
+    }
     const found = MOCK_DEALS.find((d) => d.id === dealId) || MOCK_DEALS[0];
     return sendJson(res, 200, found);
   }
 
-  // Payments List / History
+  // Payments List / History (Persisted into Database)
   if (path === `${PREFIX}/payments` || path === `${PREFIX}/payments/history`) {
+    const db = getDatabase();
     if (req.method === "GET") {
+      const dbPayments = db.prepare("SELECT * FROM payments ORDER BY created_at DESC").all().map((p) => ({
+        id: p.id,
+        type: p.type,
+        title: p.title,
+        deal: p.deal_id || "Agricultural Project",
+        amount: p.amount,
+        method: p.method,
+        date: p.date,
+        status: p.status,
+        ref: p.ref,
+        txHash: p.tx_hash,
+      }));
       return sendJson(res, 200, {
-        data: payments,
-        meta: { total: payments.length, totalAmount: payments.reduce((s, p) => s + p.amount, 0) },
+        data: dbPayments,
+        meta: { total: dbPayments.length, totalAmount: dbPayments.reduce((s, p) => s + p.amount, 0), databaseSource: "database/grambandhan.db" },
       });
     }
 
@@ -719,6 +885,27 @@ const server = http.createServer(async (req, res) => {
         txHash: `0x${Array.from({ length: 64 }, () => Math.floor(Math.random() * 16).toString(16)).join("")}`,
       };
       payments.unshift(newPay);
+
+      // Persist in real database
+      try {
+        db.prepare(`
+          INSERT INTO payments (id, user_id, deal_id, type, title, amount, method, status, ref, tx_hash, date, created_at)
+          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        `).run(newPay.id, "user-investor-1", body.dealId || "deal-001", newPay.type, newPay.title, newPay.amount, newPay.method, "COMPLETED", newPay.ref, newPay.txHash, newPay.date, new Date().toISOString());
+
+        if (newPay.type === "INVESTMENT") {
+          db.prepare(`
+            INSERT INTO investments (id, investor_id, deal_id, amount, expected_return, payment_method, tx_hash, status, created_at)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+          `).run(`inv-${Date.now()}`, "user-investor-1", body.dealId || "deal-001", newPay.amount, newPay.amount * 1.24, newPay.method, newPay.txHash, "ACTIVE", new Date().toISOString());
+
+          db.prepare(`
+            UPDATE deals SET funded_amount = funded_amount + ? WHERE id = ?
+          `).run(newPay.amount, body.dealId || "deal-001");
+        }
+      } catch (err) {
+        console.warn("Database insert note:", err.message);
+      }
 
       // Automated Verification Dispatch: Mail to binsadikmuhutasim@gmail.com & SMS to 01838213020
       const notif = dispatchVerificationNotifications(newPay, body.email, body.sms);

@@ -45,3 +45,5 @@ coverage/
 # Temporary / Scratch
 .turbo/
 *.local
+*.db-shm
+*.db-wal
