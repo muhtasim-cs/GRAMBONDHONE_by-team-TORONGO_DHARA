@@ -1,4 +1,4 @@
-# 🌾 GramBandhan — Enterprise Database Repository (For Partha)
+# 🌾 GramBandhan — Enterprise Database Repository
 
 This repository contains the complete **Unified Database Architecture, DDL SQL Schemas, Prisma ORM Models, and Seeding Scripts** for the GramBandhan Rural Agri-FinTech Platform.
 
