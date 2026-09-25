@@ -28,6 +28,8 @@ export default defineConfig({
         investor_projects: resolve(__dirname, 'investor_projects.html'),
         login: resolve(__dirname, 'login.html'),
         marketplace: resolve(__dirname, 'marketplace.html'),
+        market: resolve(__dirname, 'market.html'),
+        projects: resolve(__dirname, 'projects.html'),
         orders: resolve(__dirname, 'orders.html'),
         register: resolve(__dirname, 'register.html'),
         admin: resolve(__dirname, 'Admin/admin.html'),

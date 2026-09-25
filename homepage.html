@@ -23,19 +23,19 @@
     <div class="container nav-content">
       
       <!-- Brand Logo -->
-      <a href="homepage.html" class="brand-logo" aria-label="GramBandhan Home">
+      <a href="index.html" class="brand-logo" aria-label="GramBandhan Home">
         <img src="/images/logo-transparent.png" alt="GramBandhan" class="brand-logo-img" />
       </a>
 
       <!-- Expanded Desktop Navigation Menu Matching Project Ecosystem -->
       <nav class="nav-menu" aria-label="Main Navigation">
         <ul class="nav-links">
-          <li><a href="homepage.html" class="nav-link active">Home</a></li>
-          <li><a href="projects.html" class="nav-link">Investor Projects</a></li>
-          <li><a href="market.html" class="nav-link">Marketplace</a></li>
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="investor_projects.html" class="nav-link">Investor Projects</a></li>
+          <li><a href="marketplace.html" class="nav-link">Marketplace</a></li>
           <li><a href="investor.html" class="nav-link">Investor</a></li>
-          <li><a href="homepage.html#how-it-works" class="nav-link">How It Works</a></li>
-          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="Farmer/farmer.html" class="nav-link">Farmer Portal</a></li>
+          <li><a href="Admin/admin.html" class="nav-link">Admin Console</a></li>
         </ul>
       </nav>
 
@@ -609,7 +609,274 @@
     </section>
 
     <!-- =========================================================================
-         10. FREQUENTLY ASKED QUESTIONS (FAQ) SECTION
+         10. SDG IMPACT ALIGNMENT SECTION
+         Styles: src/styles/sdg-impact.css | Logic: src/sdg-impact.ts
+         ========================================================================= -->
+    <section class="sdg-section" id="sdg-impact" aria-label="SDG Impact Alignment">
+      <div class="container">
+
+        <!-- Header -->
+        <div class="sdg-header">
+          <div class="sdg-eyebrow">
+            <span class="sdg-eyebrow-dot"></span>
+            United Nations Sustainable Development Goals
+          </div>
+          <h2 class="sdg-title">SDG <span>Impact</span> Alignment</h2>
+          <p class="sdg-subtitle">
+            GramBondhon directly advances five UN SDGs — bridging rural agriculture with global sustainability commitments.
+          </p>
+
+          <div class="sdg-un-strip">
+            <span class="sdg-un-badge">Verified SDG Alignment</span>
+            <span class="sdg-un-divider"></span>
+            <span class="sdg-un-badge">Agenda 2030</span>
+            <span class="sdg-un-divider"></span>
+            <span class="sdg-un-badge">GramBondhon × UN</span>
+          </div>
+        </div>
+
+        <!-- 3D Flip Cards Grid -->
+        <div class="sdg-grid">
+
+          <!-- SDG 1: No Poverty -->
+          <div class="sdg-card" role="button" tabindex="0" aria-label="SDG 1: No Poverty — hover to learn more"
+               style="--sdg-color:#E5243B; --sdg-glow:rgba(229,36,59,0.45); --sdg-glow-bg:rgba(229,36,59,0.15);
+                      --sdg-tint-top:rgba(229,36,59,0.22); --sdg-tint-bot:rgba(140,15,30,0.38);
+                      --sdg-border-front:rgba(229,36,59,0.35);
+                      --sdg-back-start:#2c0812; --sdg-back-end:#3e0c1a; --sdg-border:rgba(229,36,59,0.35);">
+            <div class="sdg-card-inner">
+              <!-- Front -->
+              <div class="sdg-face sdg-face-front">
+                <div class="sdg-watermark">01</div>
+                <svg class="sdg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+                <div class="sdg-goal-badge">01</div>
+                <div class="sdg-front-title">No Poverty</div>
+                <div class="sdg-front-un-label">SDG Goal 1</div>
+                <div class="sdg-hover-hint">
+                  Hover to explore
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                </div>
+              </div>
+              <!-- Back -->
+              <div class="sdg-face sdg-face-back">
+                <div class="sdg-back-header">
+                  <div class="sdg-back-badge">01</div>
+                  <div class="sdg-back-title">No Poverty</div>
+                </div>
+                <div class="sdg-back-divider"></div>
+                <p class="sdg-back-story">
+                  GramBondhon's 0%-interest profit-sharing model breaks the debt cycle for smallholder farmers — replacing predatory moneylenders with ethical Halal capital access.
+                </p>
+                <div class="sdg-impact-metric">
+                  <span class="sdg-metric-number">1,200+</span>
+                  <span class="sdg-metric-label">Smallholder families lifted</span>
+                </div>
+                <a href="#how-it-works" class="sdg-learn-more">
+                  Learn More
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SDG 2: Zero Hunger -->
+          <div class="sdg-card" role="button" tabindex="0" aria-label="SDG 2: Zero Hunger — hover to learn more"
+               style="--sdg-color:#DDA63A; --sdg-glow:rgba(221,166,58,0.45); --sdg-glow-bg:rgba(221,166,58,0.15);
+                      --sdg-tint-top:rgba(221,166,58,0.22); --sdg-tint-bot:rgba(160,110,15,0.38);
+                      --sdg-border-front:rgba(221,166,58,0.35);
+                      --sdg-back-start:#2a1a04; --sdg-back-end:#3a2408; --sdg-border:rgba(221,166,58,0.35);">
+            <div class="sdg-card-inner">
+              <!-- Front -->
+              <div class="sdg-face sdg-face-front">
+                <div class="sdg-watermark">02</div>
+                <svg class="sdg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/>
+                </svg>
+                <div class="sdg-goal-badge">02</div>
+                <div class="sdg-front-title">Zero Hunger</div>
+                <div class="sdg-front-un-label">SDG Goal 2</div>
+                <div class="sdg-hover-hint">
+                  Hover to explore
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                </div>
+              </div>
+              <!-- Back -->
+              <div class="sdg-face sdg-face-back">
+                <div class="sdg-back-header">
+                  <div class="sdg-back-badge">02</div>
+                  <div class="sdg-back-title">Zero Hunger</div>
+                </div>
+                <div class="sdg-back-divider"></div>
+                <p class="sdg-back-story">
+                  By funding crop, livestock and aquaculture projects directly, we boost domestic food production — turning subsistence plots into productive, surplus-generating farms.
+                </p>
+                <div class="sdg-impact-metric">
+                  <span class="sdg-metric-number">840 MT</span>
+                  <span class="sdg-metric-label">Additional food produced annually</span>
+                </div>
+                <a href="#marketplace" class="sdg-learn-more">
+                  See Marketplace
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SDG 8: Decent Work -->
+          <div class="sdg-card" role="button" tabindex="0" aria-label="SDG 8: Decent Work — hover to learn more"
+               style="--sdg-color:#A21942; --sdg-glow:rgba(162,25,66,0.45); --sdg-glow-bg:rgba(162,25,66,0.15);
+                      --sdg-tint-top:rgba(162,25,66,0.22); --sdg-tint-bot:rgba(100,10,40,0.38);
+                      --sdg-border-front:rgba(162,25,66,0.35);
+                      --sdg-back-start:#28071a; --sdg-back-end:#380e26; --sdg-border:rgba(162,25,66,0.35);">
+            <div class="sdg-card-inner">
+              <!-- Front -->
+              <div class="sdg-face sdg-face-front">
+                <div class="sdg-watermark">08</div>
+                <svg class="sdg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                </svg>
+                <div class="sdg-goal-badge">08</div>
+                <div class="sdg-front-title">Decent Work &amp; Growth</div>
+                <div class="sdg-front-un-label">SDG Goal 8</div>
+                <div class="sdg-hover-hint">
+                  Hover to explore
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                </div>
+              </div>
+              <!-- Back -->
+              <div class="sdg-face sdg-face-back">
+                <div class="sdg-back-header">
+                  <div class="sdg-back-badge">08</div>
+                  <div class="sdg-back-title">Decent Work &amp; Growth</div>
+                </div>
+                <div class="sdg-back-divider"></div>
+                <p class="sdg-back-story">
+                  Our platform creates formal agricultural employment — connecting seasonal rural laborers with funded projects that offer fair, documented contracts and transparent wage records.
+                </p>
+                <div class="sdg-impact-metric">
+                  <span class="sdg-metric-number">3,500+</span>
+                  <span class="sdg-metric-label">Rural employment opportunities</span>
+                </div>
+                <a href="#projects" class="sdg-learn-more">
+                  Active Projects
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SDG 12: Responsible Consumption -->
+          <div class="sdg-card" role="button" tabindex="0" aria-label="SDG 12: Responsible Consumption — hover to learn more"
+               style="--sdg-color:#BF8B2E; --sdg-glow:rgba(191,139,46,0.45); --sdg-glow-bg:rgba(191,139,46,0.15);
+                      --sdg-tint-top:rgba(191,139,46,0.22); --sdg-tint-bot:rgba(130,88,10,0.38);
+                      --sdg-border-front:rgba(191,139,46,0.35);
+                      --sdg-back-start:#261604; --sdg-back-end:#35200a; --sdg-border:rgba(191,139,46,0.35);">
+            <div class="sdg-card-inner">
+              <!-- Front -->
+              <div class="sdg-face sdg-face-front">
+                <div class="sdg-watermark">12</div>
+                <svg class="sdg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.79"/>
+                </svg>
+                <div class="sdg-goal-badge">12</div>
+                <div class="sdg-front-title">Responsible Consumption</div>
+                <div class="sdg-front-un-label">SDG Goal 12</div>
+                <div class="sdg-hover-hint">
+                  Hover to explore
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                </div>
+              </div>
+              <!-- Back -->
+              <div class="sdg-face sdg-face-back">
+                <div class="sdg-back-header">
+                  <div class="sdg-back-badge">12</div>
+                  <div class="sdg-back-title">Responsible Consumption</div>
+                </div>
+                <div class="sdg-back-divider"></div>
+                <p class="sdg-back-story">
+                  Real-time GNSS mapping and TASFI soil monitoring eliminate over-farming and chemical overuse — producing traceable, sustainably grown food for conscious consumers.
+                </p>
+                <div class="sdg-impact-metric">
+                  <span class="sdg-metric-number">62%</span>
+                  <span class="sdg-metric-label">Reduction in input waste per acre</span>
+                </div>
+                <a href="#why-us" class="sdg-learn-more">
+                  Our Method
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SDG 13: Climate Action -->
+          <div class="sdg-card" role="button" tabindex="0" aria-label="SDG 13: Climate Action — hover to learn more"
+               style="--sdg-color:#3F7E44; --sdg-glow:rgba(63,126,68,0.45); --sdg-glow-bg:rgba(63,126,68,0.18);
+                      --sdg-tint-top:rgba(63,126,68,0.24); --sdg-tint-bot:rgba(20,80,28,0.40);
+                      --sdg-border-front:rgba(63,126,68,0.40);
+                      --sdg-back-start:#081E10; --sdg-back-end:#102A18; --sdg-border:rgba(63,126,68,0.4);">
+            <div class="sdg-card-inner">
+              <!-- Front -->
+              <div class="sdg-face sdg-face-front">
+                <div class="sdg-watermark">13</div>
+                <svg class="sdg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/>
+                </svg>
+                <div class="sdg-goal-badge">13</div>
+                <div class="sdg-front-title">Climate Action</div>
+                <div class="sdg-front-un-label">SDG Goal 13</div>
+                <div class="sdg-hover-hint">
+                  Hover to explore
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                </div>
+              </div>
+              <!-- Back -->
+              <div class="sdg-face sdg-face-back">
+                <div class="sdg-back-header">
+                  <div class="sdg-back-badge">13</div>
+                  <div class="sdg-back-title">Climate Action</div>
+                </div>
+                <div class="sdg-back-divider"></div>
+                <p class="sdg-back-story">
+                  Our ambient &amp; soil-health sensors guide climate-adaptive farming — reducing carbon-intensive inputs, promoting crop diversification, and building flood-resilient cultivation plans for Bangladesh's vulnerable delta regions.
+                </p>
+                <div class="sdg-impact-metric">
+                  <span class="sdg-metric-number">28%</span>
+                  <span class="sdg-metric-label">Lower CO₂ per harvest cycle</span>
+                </div>
+                <a href="#how-it-works" class="sdg-learn-more">
+                  How It Works
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.sdg-grid -->
+
+        <!-- Stats Counter Row -->
+        <div class="sdg-stats-row">
+          <div class="sdg-stat-item">
+            <span class="sdg-stat-number" data-target="5"><span class="sdg-stat-count">0</span><span class="sdg-stat-suffix"> SDGs</span></span>
+            <span class="sdg-stat-label">Directly Aligned</span>
+          </div>
+          <div class="sdg-stat-item">
+            <span class="sdg-stat-number" data-target="1200"><span class="sdg-stat-count">0</span><span class="sdg-stat-suffix">+</span></span>
+            <span class="sdg-stat-label">Farmers Empowered</span>
+          </div>
+          <div class="sdg-stat-item">
+            <span class="sdg-stat-number" data-target="2030"><span class="sdg-stat-count">0</span></span>
+            <span class="sdg-stat-label">Agenda 2030 Committed</span>
+          </div>
+        </div>
+
+      </div><!-- /.container -->
+    </section>
+
+    <!-- =========================================================================
+         11. FREQUENTLY ASKED QUESTIONS (FAQ) SECTION
          Styles: src/styles/faq.css | Logic: src/main.ts
          ========================================================================= -->
     <section class="faq-section" id="faq" aria-label="Frequently Asked Questions">
@@ -892,23 +1159,26 @@
         </div>
 
         <div class="footer-col">
-          <h4>Platform</h4>
+          <h4>Platform Portals</h4>
           <ul class="footer-links">
-            <li><a href="#projects">Active Projects</a></li>
-            <li><a href="#marketplace" data-action="open-marketplace">Handcrafted Marketplace</a></li>
+            <li><a href="investor_projects.html">30 Verified Projects</a></li>
+            <li><a href="marketplace.html">Village Marketplace (বাজার)</a></li>
+            <li><a href="Farmer/farmer.html">Farmer Portal (কৃষক পোর্টাল)</a></li>
+            <li><a href="Admin/admin.html">Admin Console (প্রশাসন)</a></li>
+            <li><a href="orders.html">Track Orders (অর্ডার ট্র্যাকিং)</a></li>
             <li><a href="#how-it-works">How It Works</a></li>
-            <li><a href="#why-us">Why GramBandhan</a></li>
-            <li><a href="#faq">Frequently Asked Questions</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>For Investors</h4>
+          <h4>Investor Ecosystem</h4>
           <ul class="footer-links">
-            <li><a href="#navbar" id="footer-login">Investor Portal</a></li>
-            <li><a href="#how-it-works">Shariah Advisory</a></li>
-            <li><a href="#how-it-works">Risk Disclosures</a></li>
-            <li><a href="#how-it-works">Terms of Service</a></li>
+            <li><a href="investor.html">Investor Home</a></li>
+            <li><a href="investor_dashboard.html">Telemetry Dashboard</a></li>
+            <li><a href="investor_financials.html">Capital & Return Ledger</a></li>
+            <li><a href="investor_airisk.html">AI Risk Analysis</a></li>
+            <li><a href="investor_profile.html">Profile & KYC Settings</a></li>
+            <li><a href="/Backend_Architecture_Report_with_Rust_and_Blockchain_Analysis.pdf" target="_blank">IEEE Architecture Report (PDF)</a></li>
           </ul>
         </div>
 

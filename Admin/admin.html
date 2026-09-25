@@ -21,7 +21,7 @@
   <!-- ============ ADMIN SIGN IN ============ -->
   <div id="authScreen" class="auth auth--admin">
     <aside class="auth__brand">
-      <div class="brand">
+      <a href="/index.html" class="brand" title="Return to GramBandhan Home" style="text-decoration:none;">
         <span class="brand__mark" aria-hidden="true">
           <svg viewBox="0 0 32 32" width="28" height="28">
             <path d="M16 29c0-8 4-13 11-15-1 9-5 14-11 15Z" fill="#6FBF73" />
@@ -31,7 +31,7 @@
           </svg>
         </span>
         <span class="brand__name">Grambandhan</span>
-      </div>
+      </a>
       <h1 class="auth__headline">Admin console</h1>
       <p class="auth__sub">Approvals, money movement, verification and fraud monitoring for the whole platform. Every
         action here is written to the audit log.</p>
@@ -178,6 +178,13 @@
           </svg>
           System Architecture
         </a>
+        <a href="/index.html" style="margin-top:auto;border-top:1px solid var(--line);padding-top:12px;color:#10B981;font-weight:700;">
+          <svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+          GramBandhan Home
+        </a>
       </nav>
       <button class="rail__out" id="logoutBtn">Sign out</button>
     </aside>
@@ -189,6 +196,9 @@
         <span id="topMeta">Platform administrator</span>
       </div>
       <div class="topbar__right">
+        <a href="/index.html" class="btn btn--sm btn--ghost" style="text-decoration:none;display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--ink-2);border:1px solid var(--line);border-radius:20px;padding:4px 12px;">
+          🏠 Home
+        </a>
         <input class="search" id="globalSearch" type="search" placeholder="Search projects, users, transactions…"
           aria-label="Search">
         <button class="icobtn" id="bellBtn" aria-label="Alerts">🔔<span class="dot" id="bellDot" hidden></span></button>
