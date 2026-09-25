@@ -34,6 +34,21 @@ export default defineConfig({
         register: resolve(__dirname, 'register.html'),
         admin: resolve(__dirname, 'Admin/admin.html'),
         farmer: resolve(__dirname, 'Farmer/farmer.html'),
+        tasfi_main: resolve(__dirname, 'Tasfi_Investor_Homepage_Market/index.html'),
+        tasfi_homepage: resolve(__dirname, 'Tasfi_Investor_Homepage_Market/homepage.html'),
+        tasfi_investor: resolve(__dirname, 'Tasfi_Investor_Homepage_Market/investor.html'),
+        tasfi_investor_airisk: resolve(__dirname, 'Tasfi_Investor_Homepage_Market/investor_airisk.html'),
+        tasfi_investor_dashboard: resolve(__dirname, 'Tasfi_Investor_Homepage_Market/investor_dashboard.html'),
+        tasfi_investor_financials: resolve(__dirname, 'Tasfi_Investor_Homepage_Market/investor_financials.html'),
+        tasfi_investor_marketplace: resolve(__dirname, 'Tasfi_Investor_Homepage_Market/investor_marketplace.html'),
+        tasfi_investor_profile: resolve(__dirname, 'Tasfi_Investor_Homepage_Market/investor_profile.html'),
+        tasfi_investor_projects: resolve(__dirname, 'Tasfi_Investor_Homepage_Market/investor_projects.html'),
+        tasfi_login: resolve(__dirname, 'Tasfi_Investor_Homepage_Market/login.html'),
+        tasfi_marketplace: resolve(__dirname, 'Tasfi_Investor_Homepage_Market/marketplace.html'),
+        tasfi_market: resolve(__dirname, 'Tasfi_Investor_Homepage_Market/market.html'),
+        tasfi_projects: resolve(__dirname, 'Tasfi_Investor_Homepage_Market/projects.html'),
+        tasfi_orders: resolve(__dirname, 'Tasfi_Investor_Homepage_Market/orders.html'),
+        tasfi_register: resolve(__dirname, 'Tasfi_Investor_Homepage_Market/register.html'),
       }
     }
   }

@@ -91,4 +91,31 @@ Follow these step-by-step scenarios during defense or evaluation:
 | **2. Code Quality & Type Safety** | Zero compile errors, strict TypeScript. | 100% strict TypeScript (`tsconfig.json`), `npx tsc --noEmit` exits with code 0, modular CSS variables. |
 | **3. Innovation & Research Value** | Novel application addressing socio-economic problems. | Mudarabah zero-interest profit-sharing, Base Sepolia smart contract escrow, D3 AST live topology visualization, GNSS precision agriculture. |
 | **4. User Experience & Design Polish** | Modern, responsive, accessible aesthetics. | High-contrast forest green luxury palette (`#061D15`, `#10B981`), continuous 2.0s hero slideshow, 2×2 compact ledger, bilingual EN/বাংলা support. |
-| **5. Testing & Verification** | Complete verification of all routes and APIs. | All 17 HTML routes return HTTP 200 OK, full production bundle builds in under 3s, dev-server API health check verified. |
+| **5. Testing & Verification** | Complete verification of all routes and APIs. | All 32 HTML routes return HTTP 200 OK, full production bundle builds in under 4s, dev-server API health check verified. |
+
+---
+
+## 📂 Contributor Directory Audit & Individual Module Grading
+
+For individual student evaluation, supervisors can inspect each team member's isolated module workspace:
+
+### 1. Shamia Akhter Tasfi ([@Tasfi21](https://github.com/Tasfi21))
+- **Dedicated Directory**: [`Tasfi_Investor_Homepage_Market/`](file:///C:/Users/binsa/.gemini/antigravity-ide/scratch/GRAMBONDHONE_by-team-TORONGO_DHARA/Tasfi_Investor_Homepage_Market/)
+- **Module Guide**: [`Tasfi_Investor_Homepage_Market/README.md`](file:///C:/Users/binsa/.gemini/antigravity-ide/scratch/GRAMBONDHONE_by-team-TORONGO_DHARA/Tasfi_Investor_Homepage_Market/README.md) & [`TEACHER_EXPLANATION_GUIDE.md`](file:///C:/Users/binsa/.gemini/antigravity-ide/scratch/GRAMBONDHONE_by-team-TORONGO_DHARA/Tasfi_Investor_Homepage_Market/TEACHER_EXPLANATION_GUIDE.md)
+- **Scope**: Landing Page (Hero 2.0s crossfade, SDG flip cards), Investor Ecosystem (Dashboard, 30 Projects with Mudarabah Calculator, 2×2 Ledger, AI Risk satellite radar, IBBL/bKash Profile), Village Marketplace (100 products in ৳, search autocomplete, cart drawer), Orders Tracker, and Bondhon AI Chatbot.
+- **Direct Demo Link**: [http://localhost:5173/Tasfi_Investor_Homepage_Market/index.html](http://localhost:5173/Tasfi_Investor_Homepage_Market/index.html)
+
+### 2. MD. Jahidul Islam Jony ([@theTerminatorrr](https://github.com/theTerminatorrr))
+- **Dedicated Directories**: [`Farmer/`](file:///C:/Users/binsa/.gemini/antigravity-ide/scratch/GRAMBONDHONE_by-team-TORONGO_DHARA/Farmer/) & [`Admin/`](file:///C:/Users/binsa/.gemini/antigravity-ide/scratch/GRAMBONDHONE_by-team-TORONGO_DHARA/Admin/)
+- **Scope**: Agricultural producer portal, harvest recording, land registration, bilingual UI, admin staff compliance, KYC approval queues, and milestone release triggers.
+- **Direct Demo Links**: [http://localhost:5173/Farmer/farmer.html](http://localhost:5173/Farmer/farmer.html) & [http://localhost:5173/Admin/admin.html](http://localhost:5173/Admin/admin.html)
+
+### 3. Muhutasim ([@muhtasim-cs](https://github.com/muhtasim-cs))
+- **Dedicated Directory**: [`backend/`](file:///C:/Users/binsa/.gemini/antigravity-ide/scratch/GRAMBONDHONE_by-team-TORONGO_DHARA/backend/)
+- **Scope**: Enterprise NestJS microservices, Base Sepolia blockchain smart contracts (`contracts/`), Rust event indexer (`indexer/`), Zapier webhook relay, mock dev-server, and D3 AST Graphify engine (`Admin/admin.ts`).
+- **Direct Demo Link**: [http://localhost:5173/Admin/admin.html#/graphify](http://localhost:5173/Admin/admin.html#/graphify) & [http://localhost:3001/api/v1/health](http://localhost:3001/api/v1/health)
+
+### 4. Partha ([@pCubeReBorn](https://github.com/pCubeReBorn))
+- **Dedicated Directory**: [`database/`](file:///C:/Users/binsa/.gemini/antigravity-ide/scratch/GRAMBONDHONE_by-team-TORONGO_DHARA/database/)
+- **Scope**: Unified 16-table PostgreSQL DDL schema, Prisma ORM entity modeling, relational integrity, foreign key constraints, and seeders.
+

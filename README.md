@@ -49,7 +49,7 @@ In developing agrarian economies such as Bangladesh, smallholder farmers (produc
 | :--- | :--- | :--- | :--- |
 | **Muhutasim** | [@muhtasim-cs](https://github.com/muhtasim-cs) | **Lead Software Architect & Backend Engineer**<br/>Enterprise NestJS API Gateway, Base Sepolia EVM smart contracts, Rust event indexer, Zapier webhook relay, dev-server, and D3 AST Graphify engine. | `backend/`, `Admin/admin.ts`, `dev-server.mjs`, `contracts/`, `indexer/` |
 | **MD. Jahidul Islam Jony** | [@theTerminatorrr](https://github.com/theTerminatorrr) | **Farmer Portal & Admin / Staff Systems Engineer**<br/>Agricultural producer portal, land registration, bilingual Bengali UI, staff compliance KYC queue, and admin audit logging. | `Farmer/`, `Admin/admin.html`, `Farmer/farmer.ts` |
-| **Shamia Akhter Tasfi** | [@Tasfi21](https://github.com/Tasfi21) | **Frontend Lead & Full Investor Ecosystem Engineer**<br/>Landing page & 2.0s hero slideshow, 30 verified project directory, 2×2 compact ledger, and bilingual Bondhon AI Chatbot. | `src/`, `homepage.html`, `investor_*.html`, `chatbot.ts` |
+| **Shamia Akhter Tasfi** | [@Tasfi21](https://github.com/Tasfi21) | **Frontend Lead & Full Investor Ecosystem Engineer**<br/>Landing page & 2.0s hero slideshow, 30 verified project directory, 2×2 compact ledger, and bilingual Bondhon AI Chatbot. | `Tasfi_Investor_Homepage_Market/`, `homepage.html`, `investor_*.html`, `marketplace.html`, `chatbot.ts` |
 | **Partha** | [@pCubeReBorn](https://github.com/pCubeReBorn) | **Enterprise Database Architect**<br/>Unified 16-table PostgreSQL DDL schema, Prisma ORM entity modeling, relational integrity, foreign key constraints, and seeders. | `database/`, `prisma/schema.prisma`, `seed.js` |
 
 ---
@@ -218,15 +218,23 @@ GramBandhan is formally mapped against 6 United Nations Agenda 2030 targets:
 
 ```
 GRAMBONDHONE_by-team-TORONGO_DHARA/
-├── Admin/                          # Admin compliance workspace (Graphify AST, KYC, Escrow)
-├── Farmer/                         # Agricultural producer portal (Land registry, Harvest logs)
-├── backend/                        # Enterprise NestJS backend, dev-server, smart contracts
+├── Admin/                          # Admin compliance workspace (Graphify AST, KYC, Escrow) - Jony
+├── Farmer/                         # Agricultural producer portal (Land registry, Harvest logs) - Jony
+├── Tasfi_Investor_Homepage_Market/ # Dedicated Investor Ecosystem, Village Marketplace & Landing Hub - Tasfi
+│   ├── README.md                   # Tasfi's module architecture & research documentation
+│   ├── TEACHER_EXPLANATION_GUIDE.md# Module owner explanation & viva defense guide
+│   ├── index.html & homepage.html  # Hero 2.0s carousel, SDG alignment & spotlight
+│   ├── investor_*.html             # 6 Investor tabs (Dashboard, Projects, Financials, AI Risk, Profile)
+│   ├── marketplace.html & orders.html # Village commerce & real-time delivery tracking
+│   ├── css/                        # 13 Modular stylesheets
+│   └── src/                        # TypeScript controllers & data models
+├── backend/                        # Enterprise NestJS backend, dev-server, smart contracts - Muhtasim
 │   ├── dev-server.mjs              # Fast local mock API server & webhook relay
 │   ├── contracts/                  # Base Sepolia Foundry smart contracts
 │   ├── indexer/                    # Rust blockchain event indexer
 │   ├── prisma/                     # PostgreSQL schema definition & migrations
 │   └── src/                        # NestJS controllers, services, and modules
-├── database/                       # PostgreSQL relational DDL scripts & handoff specs
+├── database/                       # PostgreSQL relational DDL scripts & handoff specs - Partha
 ├── docs/                           # Dedicated academic & engineering documentation
 │   ├── ARCHITECTURE.md             # In-depth 3-tier architecture & C4 diagrams
 │   ├── SUPERVISOR_EVALUATION_GUIDE.md # 10-minute defense & viva evaluation guide
@@ -234,17 +242,10 @@ GRAMBONDHONE_by-team-TORONGO_DHARA/
 │   └── API_SPECIFICATION.md        # Complete REST API contracts & JSON schemas
 ├── public/                         # Public assets, authentic images, and IEEE PDF report
 ├── src/                            # Modular TypeScript frontend orchestrator
-│   ├── main.ts                     # Application coordinator & multi-page router
-│   ├── homepage.ts                 # Homepage coordinator & hero slideshow
-│   ├── investor.ts                 # Investor ecosystem coordinator
-│   ├── active-projects.ts          # 30 verified project cards & calculator
-│   ├── marketplace.ts              # Village marketplace, category chips, cart drawer
-│   ├── chatbot.ts                  # Bilingual Bondhon AI Chatbot
-│   └── styles/                     # Modular scoped stylesheets
-├── index.html & homepage.html      # Landing page entrypoints
-├── investor_*.html                 # Investor ecosystem dedicated pages
-├── marketplace.html & orders.html  # Marketplace storefront & delivery tracking
-├── vite.config.ts                  # Multi-page Rollup bundler & /api proxy
+├── index.html & homepage.html      # Root landing page entrypoints
+├── investor_*.html                 # Root investor ecosystem dedicated pages
+├── marketplace.html & orders.html  # Root marketplace storefront & delivery tracking
+├── vite.config.ts                  # Multi-page Rollup bundler & /api proxy (all routes)
 ├── tsconfig.json                   # Strict TypeScript compiler options
 └── package.json                    # Root orchestration scripts
 ```
