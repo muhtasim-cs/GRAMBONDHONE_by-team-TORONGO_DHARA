@@ -1,34 +1,47 @@
-# 🌾 GramBandhan — Frontend, Farmer & Admin Application Hub
-### Official Repository for Jony (`jony_today_25`)
+# 🌾 GramBandhan (গ্রামীণ বন্ধন)
+### Official Repository for Team TORONGO_DHARA
 
-This repository contains the complete **Frontend Web Application, Farmer Portal, and Admin Control Hub** for the GramBandhan Rural Agri-FinTech Platform.
+A Shariah-compliant digital agricultural financing, milestone-locked escrow, and rural village commerce platform connecting ethical global investors with local Bangladeshi farmers and rural women artisans under fair Mudarabah profit sharing.
 
 ---
 
-## 🏛️ Core Modules Included
+## 👥 Team TORONGO_DHARA Contributors
 
-### 1. 🧑‍🌾 Farmer Portal (`Farmer/`)
-- **`Farmer/farmer.html`**: Dedicated agricultural producer workspace.
-- **Features**:
-  - Live Harvest Recording & Crop Yield telemetry.
-  - Land title & Farm parcel verification status.
-  - Capital disbursement progress & payout records.
-  - Agronomist inspection log feeds.
+| Contributor | GitHub Profile | Module / Domain Responsibility |
+| :--- | :--- | :--- |
+| **Muhutasim** | [@muhtasim-cs](https://github.com/muhtasim-cs) | Enterprise Backend Architecture, Base Sepolia Blockchain, API Gateway & Indexer |
+| **MD. Jahidul Islam Jony** | [@theTerminatorrr](https://github.com/theTerminatorrr) | Farmer Portal & Admin / Staff Management System |
+| **Shamia Akhter Tasfi** | [@Tasfi21](https://github.com/Tasfi21) | Landing Page & Hero Section, Full Investor Ecosystem, Bondhon AI Chatbot |
+| **Partha** | [@pCubeReBorn](https://github.com/pCubeReBorn) | Enterprise Database Architecture, Unified PostgreSQL Schemas & Seeders |
 
-### 2. 🛡️ Admin & Staff Portal (`Admin/`)
-- **`Admin/admin.html`**: Administrative and compliance management center.
-- **Features**:
-  - **National ID KYC Queue**: Review and verify Farmer/Investor credentials.
-  - **Deal Approval Engine**: Approve agricultural campaigns for public funding.
-  - **Escrow Settlement Release**: Disburse funds directly on Base Sepolia blockchain.
-  - **Inter-Role Communication Relay**: Broadcast urgent notices and updates across the platform.
+---
 
-### 3. 🌐 Investor & Marketplace Subsystem
-- **`homepage.html` / `index.html`**: Hero Section (2.0s continuous agricultural slideshow), Halal investment spotlight, and How It Works guide.
-- **`investor.html` & `investor_*.html`**: Multi-tab Investor ecosystem (Dashboard, Projects, Financials, AI Risk, Profile).
-- **`marketplace.html`**: 100 authentic Bangladeshi rural products priced in Taka (৳) with instant search autocomplete and category filter chips.
-- **`orders.html`**: Real-time delivery tracker with live progress states.
-- **`login.html` & `register.html`**: Role-based authentication with 1-Click Demo Login.
+## 🏛️ System Features & Subsystems
+
+### 1. 🌟 Landing Page & Authentic Hero Section
+- **Files**: `index.html`, `homepage.html`, `src/hero-section.ts`, `css/hero-section.css`
+- **Continuous 2.0s Slideshow**: High-definition crossfade carousel showing authentic Bangladeshi agriculture without hover pausing.
+- **Halal Spotlight**: Real-time spotlight of active agricultural cohorts with verified return rates.
+
+### 2. 🤖 Bondhon AI Chatbot (বন্ধন এআই)
+- **Files**: `src/chatbot.ts`, `src/styles/chatbot.css`, `public/images/chatbot-logo.*`
+- **Conversational Intelligence**: Bilingual (Bangla & English) financial guide assisting with Mudarabah 65/35 profit sharing, crop insurance, and investment calculations.
+
+### 3. 💼 Investor Ecosystem
+- **`investor_dashboard.html`**: Overview telemetry with dark green fintech theme (`#02221A`).
+- **`investor_projects.html`**: 30 verified agricultural projects across Bangladesh with the interactive **Investment Return Calculator**.
+- **`investor_financials.html`**: Redesigned **2×2 Compact Capital Outflow & Return Inflow Ledger** ensuring GAAP double-entry transparency.
+- **`investor_airisk.html`**: Predictive crop yield analysis and satellite precipitation radar.
+- **`investor_profile.html`**: NID verification, IBBL bank accounts, and bKash payout wallets.
+
+### 4. 🧑‍🌾 Farmer & Producer Portal (`Farmer/`)
+- **`Farmer/farmer.html`**: Agricultural producer portal for land registration, harvest logging, and milestone payout disbursements.
+
+### 5. 🛡️ Admin & Staff Compliance Portal (`Admin/`)
+- **`Admin/admin.html`**: National ID KYC queue, deal evaluation engine, and on-chain escrow fund release.
+
+### 6. 🛒 Village Marketplace & Delivery Tracking
+- **`marketplace.html` & `orders.html`**: 100 authentic Bangladeshi rural products priced in ৳ with instant search autocomplete and live multi-stage order tracking.
 
 ---
 
@@ -45,21 +58,7 @@ npm run dev
 ```
 The application will launch on **`http://localhost:5173`**.
 
-### 3. Build for Production
+### 3. Production Build
 ```bash
 npm run build
 ```
-
----
-
-## 🔗 Key Route Index
-
-| Portal / View | Local URL |
-| :--- | :--- |
-| **Homepage** | `http://localhost:5173/homepage.html` |
-| **Farmer Dashboard** | `http://localhost:5173/Farmer/farmer.html` |
-| **Admin Panel** | `http://localhost:5173/Admin/admin.html` |
-| **Investor Dashboard** | `http://localhost:5173/investor_dashboard.html` |
-| **Investor Projects** | `http://localhost:5173/investor_projects.html` |
-| **Village Marketplace** | `http://localhost:5173/marketplace.html` |
-| **Order Tracking** | `http://localhost:5173/orders.html` |
