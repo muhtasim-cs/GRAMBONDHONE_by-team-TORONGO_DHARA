@@ -1,5 +1,5 @@
-# 🌾 GramBandhan (গ্রামীণ বন্ধন)
-### An Enterprise Shariah-Compliant Agro-FinTech, AI Geospatial Risk Modeling & Decentralized Rural Producer Ecosystem
+# 🌾 GramBandhan: A Decentralized Milestone-Escrow and Double-Entry Ledger Framework for Transparent Agricultural Finance and Automated Profit Settlement
+### গ্রামীণ বন্ধন — An Enterprise Shariah-Compliant Agro-FinTech, AI Geospatial Risk Modeling & Decentralized Rural Producer Ecosystem
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.4-blue.svg?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![NestJS](https://img.shields.io/badge/NestJS-10.3-E0234E.svg?logo=nestjs&logoColor=white)](https://nestjs.com/)
