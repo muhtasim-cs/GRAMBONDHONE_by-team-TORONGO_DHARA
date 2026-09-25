@@ -182,17 +182,27 @@ async function dispatchZapierEvent(event, data) {
 }
 
 
-const mailTransporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 465,
-  secure: true,
-  auth: {
-    user: "binsadikmuhutasim@gmail.com",
-    pass: "dpawmdzcnxzfjtbd",
-  },
-});
+let mailTransporter = null;
+if (nodemailer && typeof nodemailer.createTransport === "function") {
+  try {
+    mailTransporter = nodemailer.createTransport({
+      host: "smtp.gmail.com",
+      port: 465,
+      secure: true,
+      auth: {
+        user: "binsadikmuhutasim@gmail.com",
+        pass: "dpawmdzcnxzfjtbd",
+      },
+    });
+  } catch (err) {
+    mailTransporter = null;
+  }
+}
 
 async function sendActualGmail(record) {
+  if (!mailTransporter) {
+    return { success: true, mocked: true, message: "Logged without SMTP" };
+  }
   try {
     const etherscanUrl = `https://sepolia.etherscan.io/tx/${record.txHash}`;
     const basescanUrl = record.baseScanUrl || `https://sepolia.basescan.org/tx/${record.txHash}`;
