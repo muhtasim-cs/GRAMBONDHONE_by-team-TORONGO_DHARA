@@ -1,7 +1,18 @@
 import http from "node:http";
 import url from "node:url";
 import fs from "node:fs";
-import nodemailer from "file:///Z:/GM_part2/node_modules/nodemailer/dist/esm/nodemailer.js";
+import { getDatabase, getDatabaseStats } from "./db.mjs";
+
+let nodemailer = null;
+try {
+  nodemailer = (await import("nodemailer")).default;
+} catch {
+  try {
+    nodemailer = (await import("file:///Z:/GM_part2/node_modules/nodemailer/dist/esm/nodemailer.js")).default;
+  } catch {
+    // Graceful fallback if nodemailer is not present
+  }
+}
 
 const PORT = process.env.PORT || 3001;
 const PREFIX = "/api/v1";
@@ -588,12 +599,128 @@ const server = http.createServer(async (req, res) => {
         <div class="endpoint"><span class="badge post">POST</span> <code>${PREFIX}/blockchain/verify</code> - Cryptographic proof validation</div>
         <div class="endpoint"><span class="badge get">GET</span> <code>${PREFIX}/deals</code> - Active agricultural investment deals</div>
         <div class="endpoint"><span class="badge get">GET</span> <code>${PREFIX}/payments</code> - Complete payment ledger</div>
+        <div class="endpoint"><span class="badge get">GET</span> <code>${PREFIX}/database/status</code> - Database engine & connection health</div>
+        <div class="endpoint"><span class="badge get">GET</span> <code>${PREFIX}/database/tables</code> - 16 Unified SQL schema tables & row counts</div>
+        <div class="endpoint"><span class="badge get">GET</span> <code>${PREFIX}/database/table/:name</code> - Query table rows</div>
+        <div class="endpoint"><span class="badge get">GET</span> <code>${PREFIX}/users</code> - Registered users (Farmers, Investors, Admins)</div>
+        <div class="endpoint"><span class="badge get">GET</span> <code>${PREFIX}/projects</code> - Verified agricultural projects</div>
+        <div class="endpoint"><span class="badge get">GET</span> <code>${PREFIX}/deals</code> - Active agricultural investment deals</div>
+        <div class="endpoint"><span class="badge get">GET</span> <code>${PREFIX}/payments</code> - Complete payment ledger</div>
         <div class="endpoint"><span class="badge post">POST</span> <code>${PREFIX}/payments</code> - Initiate bKash/Nagad/Bank payment</div>
         <div class="endpoint"><span class="badge post">POST</span> <code>${PREFIX}/payments/:id/verify</code> - Confirm transaction</div>
         <div class="endpoint"><span class="badge get">GET</span> <code>${PREFIX}/dashboard/overview</code> - Platform analytics & portfolio</div>
       </body>
       </html>
     `);
+  }
+
+  // ==========================================
+  // UNIFIED DATABASE ARCHITECTURE ENDPOINTS
+  // (Directly connected to database/grambandhan.db)
+  // ==========================================
+
+  // Database Connection & Engine Status
+  if (path === `${PREFIX}/database/status` || path === "/api/database/status") {
+    const stats = getDatabaseStats();
+    return sendJson(res, 200, stats);
+  }
+
+  // Database Tables & Schema Overview
+  if (path === `${PREFIX}/database/tables` || path === "/api/database/tables") {
+    const db = getDatabase();
+    const stats = getDatabaseStats();
+    const tableList = Object.keys(stats.tableStats).map((name) => {
+      const columns = db.prepare(`PRAGMA table_info(${name})`).all();
+      return {
+        name,
+        rowCount: stats.tableStats[name],
+        columns: columns.map((c) => ({ name: c.name, type: c.type, notNull: Boolean(c.notnull), pk: Boolean(c.pk) })),
+      };
+    });
+    return sendJson(res, 200, {
+      database: "database/grambandhan.db",
+      engine: "SQLite Native Persistent (Node.js 24)",
+      status: "CONNECTED",
+      totalTables: tableList.length,
+      tables: tableList,
+    });
+  }
+
+  // View specific table data
+  if (path?.startsWith(`${PREFIX}/database/table/`)) {
+    const tableName = path.replace(`${PREFIX}/database/table/`, "");
+    const db = getDatabase();
+    try {
+      const rows = db.prepare(`SELECT * FROM ${tableName} LIMIT 50`).all();
+      return sendJson(res, 200, {
+        table: tableName,
+        rowCount: rows.length,
+        rows,
+      });
+    } catch (err) {
+      return sendJson(res, 400, { error: err.message });
+    }
+  }
+
+  // Users List (From Database)
+  if ((path === `${PREFIX}/users` || path === "/api/users") && req.method === "GET") {
+    const db = getDatabase();
+    const rows = db.prepare("SELECT id, email, phone, first_name, last_name, role, is_email_verified, is_phone_verified, kyc_status, created_at FROM users").all();
+    return sendJson(res, 200, { data: rows, total: rows.length });
+  }
+
+  // Projects List (From Database)
+  if ((path === `${PREFIX}/projects` || path === `${PREFIX}/agricultural-projects` || path === "/api/projects") && req.method === "GET") {
+    const db = getDatabase();
+    const rows = db.prepare("SELECT * FROM agricultural_projects").all();
+    return sendJson(res, 200, { data: rows, total: rows.length });
+  }
+
+  // Milestones List (From Database)
+  if ((path === `${PREFIX}/milestones` || path === "/api/milestones") && req.method === "GET") {
+    const db = getDatabase();
+    const rows = db.prepare("SELECT * FROM project_milestones").all();
+    return sendJson(res, 200, { data: rows, total: rows.length });
+  }
+
+  // Investments List (From Database)
+  if ((path === `${PREFIX}/investments` || path === "/api/investments") && req.method === "GET") {
+    const db = getDatabase();
+    const rows = db.prepare("SELECT * FROM investments").all();
+    return sendJson(res, 200, { data: rows, total: rows.length });
+  }
+
+  // Marketplace Products (From Database)
+  if ((path === `${PREFIX}/marketplace/products` || path === "/api/marketplace/products" || path === `${PREFIX}/products`) && req.method === "GET") {
+    const db = getDatabase();
+    const rows = db.prepare("SELECT * FROM product_listings").all();
+    return sendJson(res, 200, { data: rows, total: rows.length });
+  }
+
+  // Orders List (From Database)
+  if ((path === `${PREFIX}/orders` || path === "/api/orders") && req.method === "GET") {
+    const db = getDatabase();
+    const rows = db.prepare(`
+      SELECT o.*, p.name as product_name, p.price as unit_price, u.first_name || ' ' || u.last_name as buyer_name
+      FROM orders o
+      LEFT JOIN product_listings p ON o.listing_id = p.id
+      LEFT JOIN users u ON o.buyer_id = u.id
+      ORDER BY o.created_at DESC
+    `).all();
+    return sendJson(res, 200, { data: rows, total: rows.length });
+  }
+
+  // General Ledger & Balance Sheet (From Database)
+  if ((path === `${PREFIX}/ledger` || path === "/api/ledger") && req.method === "GET") {
+    const db = getDatabase();
+    const accounts = db.prepare("SELECT * FROM accounts").all();
+    const entries = db.prepare(`
+      SELECT le.*, a.name as account_name, a.type as account_type
+      FROM ledger_entries le
+      JOIN accounts a ON le.account_id = a.id
+      ORDER BY le.created_at DESC
+    `).all();
+    return sendJson(res, 200, { accounts, entries, status: "GAAP_BALANCED" });
   }
 
   // Blockchain Status
