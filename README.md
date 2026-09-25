@@ -3,14 +3,13 @@
 **Official Repository — Team TORONGO_DHARA**
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.4-blue.svg?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Vite](https://img.shields.io/badge/Vite-5.2-646CFF.svg?logo=vite&logoColor=white)](https://vitejs.dev/)
 [![NestJS](https://img.shields.io/badge/NestJS-10.3-E0234E.svg?logo=nestjs&logoColor=white)](https://nestjs.com/)
 [![Base Sepolia](https://img.shields.io/badge/Blockchain-Base_Sepolia_(84532)-0052FF.svg?logo=ethereum&logoColor=white)](https://sepolia.basescan.org/)
 [![Rust Indexer](https://img.shields.io/badge/Indexer-Rust_2021-DEA584.svg?logo=rust&logoColor=white)](https://www.rust-lang.org/)
 [![Prisma ORM](https://img.shields.io/badge/Prisma-5.10-2D3748.svg?logo=prisma&logoColor=white)](https://www.prisma.io/)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16.0-4169E1.svg?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Build Status](https://img.shields.io/badge/Build-Passing_(17_Entrypoints)-success.svg)](#-production-build--quality-assurance)
+[![Backend Status](https://img.shields.io/badge/Backend-Passing_(NestJS_&_Prisma)-success.svg)](#-local-setup-execution--verification)
 
 ---
 
@@ -18,16 +17,15 @@
 1. [Executive Summary & Problem Statement](#-1-executive-summary--problem-statement)
 2. [Team TORONGO_DHARA Contributors & Domain Matrix](#-2-team-torongo_dhara-contributors--domain-matrix)
 3. [Enterprise 3-Tier System Architecture](#-3-enterprise-3-tier-system-architecture)
-4. [Complete Platform Portals & Multi-Page Directory](#-4-complete-platform-portals--multi-page-directory)
-5. [Supervisor Evaluation Protocol & 1-Click SSO Walkthrough](#-5-supervisor-evaluation-protocol--1-click-sso-walkthrough)
+4. [Platform Portals & Multi-Branch Architecture](#-4-platform-portals--multi-branch-architecture)
+5. [Supervisor Evaluation Protocol & 1-Click Walkthrough](#-5-supervisor-evaluation-protocol--1-click-walkthrough)
 6. [Core Research Innovations & Mathematical Formulations](#-6-core-research-innovations--mathematical-formulations)
 7. [Base Sepolia Smart Contracts & Milestone Escrow](#-7-base-sepolia-smart-contracts--milestone-escrow)
 8. [Real-Time AST Codebase Topology (Graphify)](#-8-real-time-ast-codebase-topology-graphify)
-9. [Bilingual Bondhon AI Chatbot (বন্ধন এআই)](#-9-bilingual-bondhon-ai-chatbot-বন্ধন-এআই)
-10. [UN Sustainable Development Goals (SDG) Alignment](#-10-un-sustainable-development-goals-sdg-alignment)
-11. [Repository Organization & Design Patterns](#-11-repository-organization--design-patterns)
-12. [Local Setup, Execution & Verification](#-12-local-setup-execution--verification)
-13. [Academic Documentation & Evaluation Papers](#-13-academic-documentation--evaluation-papers)
+9. [UN Sustainable Development Goals (SDG) Alignment](#-9-un-sustainable-development-goals-sdg-alignment)
+10. [Repository Organization & Design Patterns](#-10-repository-organization--design-patterns)
+11. [Local Setup, Execution & Verification](#-11-local-setup-execution--verification)
+12. [Academic Documentation & Evaluation Papers](#-12-academic-documentation--evaluation-papers)
 
 ---
 
@@ -45,12 +43,12 @@ In developing agrarian economies such as Bangladesh, smallholder farmers (produc
 
 ## 👥 2. Team TORONGO_DHARA Contributors & Domain Matrix
 
-| Contributor | GitHub Profile | Engineering & Research Responsibility | Core Artifacts |
+| Contributor | GitHub Profile | Engineering & Research Responsibility | Dedicated Branch / Artifacts |
 | :--- | :--- | :--- | :--- |
-| **Muhutasim** | [@muhtasim-cs](https://github.com/muhtasim-cs) | **Lead Software Architect & Backend Engineer**<br/>Enterprise NestJS API Gateway, Base Sepolia EVM smart contracts, Rust event indexer, Zapier webhook relay, dev-server, and D3 AST Graphify engine. | `backend/`, `Admin/admin.ts`, `dev-server.mjs`, `contracts/`, `indexer/` |
-| **MD. Jahidul Islam Jony** | [@theTerminatorrr](https://github.com/theTerminatorrr) | **Farmer Portal & Admin / Staff Systems Engineer**<br/>Agricultural producer portal, land registration, bilingual Bengali UI, staff compliance KYC queue, and admin audit logging. | `Farmer/`, `Admin/admin.html`, `Farmer/farmer.ts` |
-| **Shamia Akhter Tasfi** | [@Tasfi21](https://github.com/Tasfi21) | **Frontend Lead & Full Investor Ecosystem Engineer**<br/>Landing page & 2.0s hero slideshow, 30 verified project directory, 2×2 compact ledger, and bilingual Bondhon AI Chatbot. | `Tasfi_Investor_Homepage_Market/`, `homepage.html`, `investor_*.html`, `marketplace.html`, `chatbot.ts` |
-| **Partha** | [@pCubeReBorn](https://github.com/pCubeReBorn) | **Enterprise Database Architect**<br/>Unified 16-table PostgreSQL DDL schema, Prisma ORM entity modeling, relational integrity, foreign key constraints, and seeders. | `database/`, `prisma/schema.prisma`, `seed.js` |
+| **Muhutasim** | [@muhtasim-cs](https://github.com/muhtasim-cs) | **Lead Software Architect & Backend Engineer**<br/>Enterprise NestJS API Gateway, Base Sepolia EVM smart contracts, Rust event indexer, Zapier webhook relay, mock dev-server, and D3 AST Graphify engine. | `backend/`, `main`, branch [`muhtasim-backend`](https://github.com/muhtasim-cs/GRAMBONDHONE_by-team-TORONGO_DHARA/tree/muhtasim-backend) |
+| **MD. Jahidul Islam Jony** | [@theTerminatorrr](https://github.com/theTerminatorrr) | **Farmer Portal & Admin / Staff Systems Engineer**<br/>Agricultural producer portal, land registration, bilingual Bengali UI, staff compliance KYC queue, and admin audit logging. | Branch [`jony-farmer-admin`](https://github.com/muhtasim-cs/GRAMBONDHONE_by-team-TORONGO_DHARA/tree/jony-farmer-admin) (`Farmer/`, `Admin/`) |
+| **Shamia Akhter Tasfi** | [@Tasfi21](https://github.com/Tasfi21) | **Frontend Lead & Full Investor Ecosystem Engineer**<br/>Landing page & 2.0s hero slideshow, 30 verified project directory, 2×2 compact ledger, and bilingual Bondhon AI Chatbot. | Branch [`tasfi-investor_homapage_market`](https://github.com/muhtasim-cs/GRAMBONDHONE_by-team-TORONGO_DHARA/tree/tasfi-investor_homapage_market) (`homepage.html`, `investor_*.html`, `marketplace.html`) |
+| **Partha** | [@pCubeReBorn](https://github.com/pCubeReBorn) | **Enterprise Database Architect**<br/>Unified 16-table PostgreSQL DDL schema, Prisma ORM entity modeling, relational integrity, foreign key constraints, and seeders. | `database/`, branch [`partha-database`](https://github.com/muhtasim-cs/GRAMBONDHONE_by-team-TORONGO_DHARA/tree/partha-database) |
 
 ---
 
@@ -97,56 +95,45 @@ graph TD
 
 ---
 
-## 🌐 4. Complete Platform Portals & Multi-Page Directory
+## 🌐 4. Platform Portals & Multi-Branch Architecture
 
-GramBandhan delivers **17 dedicated HTML entrypoints**, compiled through Vite's multi-page Rollup bundler with zero 404 dead links:
+Team TORONGO_DHARA maintains a clean separation of concerns across specialized Git branches:
 
-| Page / Route | Persona / Subsystem | Primary Capabilities & Architectural Role |
-| :--- | :--- | :--- |
-| **[`index.html`](file:///index.html)** | Platform Gateway | Master landing page with 2.0s continuous hero carousel, Halal Spotlight, SDG impact counter, and cross-portal navigation. |
-| **[`homepage.html`](file:///homepage.html)** | Homepage Twin | Synchronized 1:1 entrypoint guaranteeing full feature parity with UN SDG cards and GIS mapping. |
-| **[`investor_projects.html`](file:///investor_projects.html)** / **[`projects.html`](file:///projects.html)** | Investor Projects | 30 verified Bangladeshi agricultural cohorts across 18 districts with the interactive **Investment Return Calculator**. |
-| **[`marketplace.html`](file:///marketplace.html)** / **[`market.html`](file:///market.html)** | Village Marketplace | Full storefront featuring 100 rural products priced in ৳, search autocomplete, category chips, and cart drawer. |
-| **[`investor.html`](file:///investor.html)** | Investor Landing | Dedicated investor portal featuring category filters, verified investor badges, and Halal underwriting criteria. |
-| **[`investor_dashboard.html`](file:///investor_dashboard.html)** | Investor Telemetry | Deep Forest Green (`#02221A`) dashboard displaying portfolio balance (৳ 4,85,000), profit tracking, and field feeds. |
-| **[`investor_financials.html`](file:///investor_financials.html)** | Financial Ledger | Redesigned **2×2 Compact Capital Outflow & Return Inflow Ledger** ensuring double-entry transparency. |
-| **[`investor_airisk.html`](file:///investor_airisk.html)** | AI Risk Analytics | Satellite precipitation radar, soil moisture indices, and crop yield forecasting. |
-| **[`investor_profile.html`](file:///investor_profile.html)** | Investor Profile | NID KYC verification status, IBBL Mudarabah bank account, and bKash/Nagad payout wallet setup. |
-| **[`orders.html`](file:///orders.html)** | Order Tracking | Real-time multi-stage order delivery tracking (🚚 On The Way / In Transit, Delivered, Cancelled). |
-| **[`Farmer/farmer.html`](file:///Farmer/farmer.html)** | Farmer & Producer Portal | Land registry, harvest cycle logging, GPS geotagging, milestone payout disbursement, and Home link. |
-| **[`Admin/admin.html`](file:///Admin/admin.html)** | Admin & Compliance Hub | Staff compliance queue, on-chain escrow release, audit logs, and **Live D3 AST Codebase Topology (Graphify)**. |
-| **[`login.html`](file:///login.html)** & **[`register.html`](file:///register.html)** | Authentication Gateway | Multi-role account access with built-in **1-Click Demo Evaluation Sign-In**. |
+| Subsystem / Portal | Dedicated Branch | Lead Engineer | Architectural Scope |
+| :--- | :--- | :--- | :--- |
+| **Enterprise Backend & Core Architecture** | [`main`](https://github.com/muhtasim-cs/GRAMBONDHONE_by-team-TORONGO_DHARA) / [`muhtasim-backend`](https://github.com/muhtasim-cs/GRAMBONDHONE_by-team-TORONGO_DHARA/tree/muhtasim-backend) | **Muhutasim** | Enterprise NestJS microservices, Base Sepolia smart contracts (`backend/contracts/`), Rust indexer, dev-server, Zapier webhooks. |
+| **Enterprise Database & Relational Schemas** | [`partha-database`](https://github.com/muhtasim-cs/GRAMBONDHONE_by-team-TORONGO_DHARA/tree/partha-database) | **Partha** | 16-table PostgreSQL DDL schema (`database/`), Prisma ORM models, relational integrity, seeders. |
+| **Farmer & Admin Compliance Ecosystem** | [`jony-farmer-admin`](https://github.com/muhtasim-cs/GRAMBONDHONE_by-team-TORONGO_DHARA/tree/jony-farmer-admin) | **MD. Jahidul Islam Jony** | Agricultural producer portal (`Farmer/`), land registration, bilingual Bengali UI, staff compliance KYC queue (`Admin/`). |
+| **Investor Ecosystem & Village Marketplace** | [`tasfi-investor_homapage_market`](https://github.com/muhtasim-cs/GRAMBONDHONE_by-team-TORONGO_DHARA/tree/tasfi-investor_homapage_market) | **Shamia Akhter Tasfi** | Master landing page (`homepage.html`), 2.0s hero slideshow, 30 verified project directory, 2×2 compact ledger, and village marketplace. |
 
 ---
 
-## 🔬 5. Supervisor Evaluation Protocol & 1-Click SSO Walkthrough
+## 🔬 5. Supervisor Evaluation Protocol & 1-Click Walkthrough
 
-For academic defense, capstone evaluation, and thesis grading, GramBandhan provides pre-seeded evaluation personas accessible via 1-click single sign-on buttons:
+For academic defense, capstone evaluation, and thesis grading, GramBandhan provides an evaluation protocol:
 
 ```
-                                EVALUATION PROTOCOL (10-MINUTE WALKTHROUGH)
+                                EVALUATION PROTOCOL (MAIN TRUNK & SERVICES)
  ┌──────────────────────┐   ┌──────────────────────┐   ┌──────────────────────┐   ┌──────────────────────┐
- │  1. LANDING & SDG    │──>│  2. INVESTOR & 2x2   │──>│  3. ADMIN & GRAPHIFY │──>│  4. FARMER & CHATBOT │
- │  • 2.0s Slideshow    │   │  • 30 Projects Grid  │   │  • 1-Click SSO Queue │   │  • Land Registration │
- │  • Halal Spotlight   │   │  • Return Calculator │   │  • D3 Force AST Graph│   │  • Bilingual AI Chat │
- │  • GNSS Satellite Map│   │  • 2×2 Compact Ledger│   │  • IEEE PDF Report   │   │  • bKash Disbursement│
+ │ 1. REST API GATEWAY  │──>│ 2. SEPOLIA ESCROW    │──>│ 3. GRAPHIFY TOPOLOGY │──>│ 4. RELATIONAL DB     │
+ │ • Health Endpoint    │   │ • Milestone Tranches │   │ • D3 AST Force Graph │   │ • 16-Table Schema    │
+ │ • Auth JWT & RBAC    │   │ • Non-Custodial Vault│   │ • Module Dependencies│   │ • Prisma Models      │
+ │ • Deal Lifecycle     │   │ • 65/35 Profit Math  │   │ • Complexity Metrics │   │ • Referential Rules  │
  └──────────────────────┘   └──────────────────────┘   └──────────────────────┘   └──────────────────────┘
 ```
 
-1. **Step 1: Landing Page & Hero Section** (`http://localhost:5173/index.html`):
-   - Review the continuous 2.0s hero carousel cycling authentic Bangladeshi agriculture.
-   - Inspect the UN SDG cards (Goals 1, 2, 5, 8, 12, 13) with interactive 3D flip physics.
-2. **Step 2: Investor Projects & Calculator** (`http://localhost:5173/investor_projects.html`):
-   - Click any card to launch the **Investment Return Calculator**. Modify units and test Mudarabah projections.
-3. **Step 3: Redesigned 2×2 Financial Ledger** (`http://localhost:5173/investor_financials.html`):
-   - Notice the compact 2×2 grid: Row 1 (Capital Sent via bKash & Field Disbursement), Row 2 (Mandi Sale & BEFTN Received).
-4. **Step 4: Admin Console & Graphify Topology** (`http://localhost:5173/Admin/admin.html?sso=1`):
-   - Access the admin portal with 1-click SSO. Click **"System Architecture"** (`#/graphify`) to drag, zoom, and inspect the live AST graph.
-   - Click **"IEEE PDF Report"** to download the formal 40-page software architecture report.
-   - Click **"🏠 GramBandhan Home"** in the topbar to return seamlessly.
-5. **Step 5: Farmer Portal & Bondhon AI Chatbot**:
-   - Access `Farmer/farmer.html?sso=1` to review harvest logs and land certificates.
-   - Open the floating chatbot icon to test bilingual Bangla/English conversational advisory.
+1. **Step 1: REST API Gateway & Health Verification** (`http://localhost:3001/api/v1/health`):
+   - Start the backend dev-server: `npm run backend:dev`.
+   - Access the health endpoint to verify Base Sepolia connection and microservice uptime.
+2. **Step 2: Smart Contract & Milestone Escrow Protocol** (`backend/contracts/`):
+   - Inspect `ShariahEscrow.sol` and `AgriPlatform.sol` implementing non-custodial milestone releases on Base Sepolia.
+3. **Step 3: Real-Time AST Codebase Topology** (`http://localhost:3001/api/graphify`):
+   - Live AST graph mapping modules, dependencies, and execution flows.
+4. **Step 4: Unified PostgreSQL Schema & Seeders** (`database/`):
+   - Inspect `grambandhan_unified_schema.sql` and `database/schema.prisma` enforcing 16-table relational integrity.
+5. **Step 5: Frontend Portals on Dedicated Member Branches**:
+   - For UI evaluation of Farmer and Admin portals, switch to branch `jony-farmer-admin`.
+   - For UI evaluation of Investor ecosystem and Marketplace, switch to branch `tasfi-investor_homapage_market`.
 
 ---
 
@@ -186,16 +173,16 @@ GramBandhan deploys verified Solidity smart contracts on **Base Sepolia (Chain I
 
 ## 📊 8. Real-Time AST Codebase Topology (Graphify)
 
-Accessible at `http://localhost:5173/Admin/admin.html#/graphify` or via API at `http://localhost:3001/api/graphify`:
-- **Engine**: Custom D3.js v7 force-directed simulation.
+Accessible via API at `http://localhost:3001/api/graphify`:
+- **Engine**: Custom D3.js v7 force-directed simulation backend endpoint.
 - **Metrics**: 46 active modules, 75 dependency edges, 17 architectural communities.
-- **Interactivity**: Drag nodes with physics recalculation, scroll-to-zoom, community color filtering, and bidirectional dependency tracing.
+- **Data Model**: Serves module nodes, inter-service dependency links, complexity weights, and architectural domain clusters.
 
 ---
 
 ## 🤖 9. Bilingual Bondhon AI Chatbot (বন্ধন এআই)
 
-Integrated into the client layer (`src/chatbot.ts`):
+Integrated on branch [`tasfi-investor_homapage_market`](https://github.com/muhtasim-cs/GRAMBONDHONE_by-team-TORONGO_DHARA/tree/tasfi-investor_homapage_market):
 - **Bilingual Intelligence**: Fluidly parses both English and authentic Bengali (*বাংলা*) agrarian terminology.
 - **Pre-Trained Knowledge Base**: Explains Mudarabah 65/35 profit splits, bKash escrow verification, crop insurance, and farmer onboarding workflows.
 - **Zero Latency**: Instant client-side inference with direct webhook escalation.
@@ -217,37 +204,29 @@ GramBandhan is formally mapped against 6 United Nations Agenda 2030 targets:
 ## 📁 11. Repository Organization & Design Patterns
 
 ```
-GRAMBONDHONE_by-team-TORONGO_DHARA/
-├── Admin/                          # Admin compliance workspace (Graphify AST, KYC, Escrow) - Jony
-├── Farmer/                         # Agricultural producer portal (Land registry, Harvest logs) - Jony
-├── Tasfi_Investor_Homepage_Market/ # Dedicated Investor Ecosystem, Village Marketplace & Landing Hub - Tasfi
-│   ├── README.md                   # Tasfi's module architecture & research documentation
-│   ├── TEACHER_EXPLANATION_GUIDE.md# Module owner explanation & viva defense guide
-│   ├── index.html & homepage.html  # Hero 2.0s carousel, SDG alignment & spotlight
-│   ├── investor_*.html             # 6 Investor tabs (Dashboard, Projects, Financials, AI Risk, Profile)
-│   ├── marketplace.html & orders.html # Village commerce & real-time delivery tracking
-│   ├── css/                        # 13 Modular stylesheets
-│   └── src/                        # TypeScript controllers & data models
+GRAMBONDHONE_by-team-TORONGO_DHARA/ (main branch)
 ├── backend/                        # Enterprise NestJS backend, dev-server, smart contracts - Muhtasim
 │   ├── dev-server.mjs              # Fast local mock API server & webhook relay
 │   ├── contracts/                  # Base Sepolia Foundry smart contracts
 │   ├── indexer/                    # Rust blockchain event indexer
 │   ├── prisma/                     # PostgreSQL schema definition & migrations
-│   └── src/                        # NestJS controllers, services, and modules
+│   ├── src/                        # NestJS controllers, services, and modules
+│   ├── Dockerfile & docker-compose # Containerized deployment
+│   ├── Backend_Architecture_Report_with_Rust_and_Blockchain_Analysis.pdf # IEEE Report
+│   └── test-auth-endpoints.mjs     # Automated API test suite
 ├── database/                       # PostgreSQL relational DDL scripts & handoff specs - Partha
+│   ├── grambandhan_unified_schema.sql # 16-table enterprise SQL schema
+│   ├── schema.prisma               # Prisma ORM schema
+│   ├── seed.js                     # High-fidelity mock data generator
+│   └── DATABASE_HANDOFF.md         # Database architecture & ERD specification
 ├── docs/                           # Dedicated academic & engineering documentation
 │   ├── ARCHITECTURE.md             # In-depth 3-tier architecture & C4 diagrams
-│   ├── SUPERVISOR_EVALUATION_GUIDE.md # 10-minute defense & viva evaluation guide
+│   ├── SUPERVISOR_EVALUATION_GUIDE.md # Defense & viva evaluation guide
 │   ├── RESEARCH_AND_METHODOLOGY.md # Financial equations & academic research paper
 │   └── API_SPECIFICATION.md        # Complete REST API contracts & JSON schemas
-├── public/                         # Public assets, authentic images, and IEEE PDF report
-├── src/                            # Modular TypeScript frontend orchestrator
-├── index.html & homepage.html      # Root landing page entrypoints
-├── investor_*.html                 # Root investor ecosystem dedicated pages
-├── marketplace.html & orders.html  # Root marketplace storefront & delivery tracking
-├── vite.config.ts                  # Multi-page Rollup bundler & /api proxy (all routes)
-├── tsconfig.json                   # Strict TypeScript compiler options
-└── package.json                    # Root orchestration scripts
+├── .gitignore                      # Git exclusion rules
+├── package.json                    # Root orchestration scripts
+└── README.md                       # Master architectural documentation
 ```
 
 ---
@@ -258,12 +237,7 @@ GRAMBONDHONE_by-team-TORONGO_DHARA/
 - Node.js (v18.0.0 or higher)
 - npm (v9.0.0 or higher)
 
-### 1. Install Dependencies
-```bash
-npm install
-```
-
-### 2. Start the Backend API Server
+### 1. Start the Backend API Server
 ```bash
 npm run backend:dev
 ```
@@ -271,23 +245,13 @@ npm run backend:dev
 - Health check: **`http://localhost:3001/api/v1/health`**
 - Live AST Topology: **`http://localhost:3001/api/graphify`**
 
-### 3. Start the Frontend Development Server
+### 2. Run Automated API Tests
 ```bash
-npm run dev
-```
-- Frontend application active on: **`http://localhost:5173`**
-- All `/api/*` requests automatically proxy from port 5173 to port 3001.
+# Execute authentication & deal endpoint verification
+npm run backend:test
 
-### 4. Production Build & Quality Assurance
-```bash
-# Validate strict TypeScript types across all files (zero errors)
-npm run typecheck
-
-# Execute multi-page Rollup production build
-npm run build
-
-# Preview production build locally
-npm run preview
+# Test real mail notification dispatcher
+npm run backend:mail
 ```
 
 ---
@@ -299,7 +263,7 @@ For in-depth defense preparation and thesis review, consult our dedicated docume
 - 🎓 **[University Supervisor Evaluation Manual](file:///docs/SUPERVISOR_EVALUATION_GUIDE.md)**
 - 🔬 **[Academic Research & Financial Methodology Paper](file:///docs/RESEARCH_AND_METHODOLOGY.md)**
 - 📡 **[REST API Specification & Webhook Reference](file:///docs/API_SPECIFICATION.md)**
-- 📄 **[IEEE Software Architecture & Blockchain Report (PDF)](file:///public/Backend_Architecture_Report_with_Rust_and_Blockchain_Analysis.pdf)**
+- 📄 **[IEEE Software Architecture & Blockchain Report (PDF)](file:///backend/Backend_Architecture_Report_with_Rust_and_Blockchain_Analysis.pdf)**
 
 ---
 
@@ -307,3 +271,4 @@ For in-depth defense preparation and thesis review, consult our dedicated docume
   <strong>GramBandhan (গ্রামীণ বন্ধন) — Team TORONGO_DHARA</strong><br/>
   <em>Empowering Rural Growth Through Ethical Technology, Shariah Transparency, and Decentralized Verification.</em>
 </p>
+

@@ -95,27 +95,25 @@ Follow these step-by-step scenarios during defense or evaluation:
 
 ---
 
-## 📂 Contributor Directory Audit & Individual Module Grading
+## 📂 Contributor Branch Audit & Individual Module Grading
 
-For individual student evaluation, supervisors can inspect each team member's isolated module workspace:
+For individual student evaluation, supervisors can inspect each team member's isolated repository branch or core directory:
 
 ### 1. Shamia Akhter Tasfi ([@Tasfi21](https://github.com/Tasfi21))
-- **Dedicated Directory**: [`Tasfi_Investor_Homepage_Market/`](file:///C:/Users/binsa/.gemini/antigravity-ide/scratch/GRAMBONDHONE_by-team-TORONGO_DHARA/Tasfi_Investor_Homepage_Market/)
-- **Module Guide**: [`Tasfi_Investor_Homepage_Market/README.md`](file:///C:/Users/binsa/.gemini/antigravity-ide/scratch/GRAMBONDHONE_by-team-TORONGO_DHARA/Tasfi_Investor_Homepage_Market/README.md) & [`TEACHER_EXPLANATION_GUIDE.md`](file:///C:/Users/binsa/.gemini/antigravity-ide/scratch/GRAMBONDHONE_by-team-TORONGO_DHARA/Tasfi_Investor_Homepage_Market/TEACHER_EXPLANATION_GUIDE.md)
+- **Dedicated Branch**: [`tasfi-investor_homapage_market`](https://github.com/muhtasim-cs/GRAMBONDHONE_by-team-TORONGO_DHARA/tree/tasfi-investor_homapage_market)
 - **Scope**: Landing Page (Hero 2.0s crossfade, SDG flip cards), Investor Ecosystem (Dashboard, 30 Projects with Mudarabah Calculator, 2×2 Ledger, AI Risk satellite radar, IBBL/bKash Profile), Village Marketplace (100 products in ৳, search autocomplete, cart drawer), Orders Tracker, and Bondhon AI Chatbot.
-- **Direct Demo Link**: [http://localhost:5173/Tasfi_Investor_Homepage_Market/index.html](http://localhost:5173/Tasfi_Investor_Homepage_Market/index.html)
 
 ### 2. MD. Jahidul Islam Jony ([@theTerminatorrr](https://github.com/theTerminatorrr))
-- **Dedicated Directories**: [`Farmer/`](file:///C:/Users/binsa/.gemini/antigravity-ide/scratch/GRAMBONDHONE_by-team-TORONGO_DHARA/Farmer/) & [`Admin/`](file:///C:/Users/binsa/.gemini/antigravity-ide/scratch/GRAMBONDHONE_by-team-TORONGO_DHARA/Admin/)
-- **Scope**: Agricultural producer portal, harvest recording, land registration, bilingual UI, admin staff compliance, KYC approval queues, and milestone release triggers.
-- **Direct Demo Links**: [http://localhost:5173/Farmer/farmer.html](http://localhost:5173/Farmer/farmer.html) & [http://localhost:5173/Admin/admin.html](http://localhost:5173/Admin/admin.html)
+- **Dedicated Branch**: [`jony-farmer-admin`](https://github.com/muhtasim-cs/GRAMBONDHONE_by-team-TORONGO_DHARA/tree/jony-farmer-admin)
+- **Scope**: Agricultural producer portal (`Farmer/`), harvest recording, land registration, bilingual UI, admin staff compliance (`Admin/`), KYC approval queues, and milestone release triggers.
 
 ### 3. Muhutasim ([@muhtasim-cs](https://github.com/muhtasim-cs))
-- **Dedicated Directory**: [`backend/`](file:///C:/Users/binsa/.gemini/antigravity-ide/scratch/GRAMBONDHONE_by-team-TORONGO_DHARA/backend/)
-- **Scope**: Enterprise NestJS microservices, Base Sepolia blockchain smart contracts (`contracts/`), Rust event indexer (`indexer/`), Zapier webhook relay, mock dev-server, and D3 AST Graphify engine (`Admin/admin.ts`).
-- **Direct Demo Link**: [http://localhost:5173/Admin/admin.html#/graphify](http://localhost:5173/Admin/admin.html#/graphify) & [http://localhost:3001/api/v1/health](http://localhost:3001/api/v1/health)
+- **Core Architecture & Directory**: [`backend/`](file:///backend/) & Branch [`muhtasim-backend`](https://github.com/muhtasim-cs/GRAMBONDHONE_by-team-TORONGO_DHARA/tree/muhtasim-backend)
+- **Scope**: Enterprise NestJS microservices, Base Sepolia blockchain smart contracts (`contracts/`), Rust event indexer (`indexer/`), Zapier webhook relay, mock dev-server (`dev-server.mjs`), and D3 AST Graphify engine.
+- **Direct Demo Link**: [http://localhost:3001/api/v1/health](http://localhost:3001/api/v1/health) & [http://localhost:3001/api/graphify](http://localhost:3001/api/graphify)
 
 ### 4. Partha ([@pCubeReBorn](https://github.com/pCubeReBorn))
-- **Dedicated Directory**: [`database/`](file:///C:/Users/binsa/.gemini/antigravity-ide/scratch/GRAMBONDHONE_by-team-TORONGO_DHARA/database/)
+- **Dedicated Directory**: [`database/`](file:///database/) & Branch [`partha-database`](https://github.com/muhtasim-cs/GRAMBONDHONE_by-team-TORONGO_DHARA/tree/partha-database)
 - **Scope**: Unified 16-table PostgreSQL DDL schema, Prisma ORM entity modeling, relational integrity, foreign key constraints, and seeders.
+
 
