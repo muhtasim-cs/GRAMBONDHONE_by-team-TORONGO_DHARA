@@ -33,9 +33,12 @@ Every file in this project is divided by feature with **zero redundancy**, makin
 | **`investor_airisk.html`** | **Investor AI Risk Analysis** | Directly opens the Investor Dashboard on the **AI Based Risk Analysis** tab. Features satellite precipitation monitoring and predictive crop yield models. |
 | **`investor_profile.html`** | **Investor Profile & Settings** | Directly opens the Investor Dashboard on the **Settings** tab. Displays verified NID validation, IBBL Mudarabah bank account details, and bKash/Nagad payout wallets. |
 | **`investor.html`** | **Investor Landing Page** | Features the Post-Login Hero banner: *"Invest in the Earth’s Future"* with category search autocomplete, verified investor badge, and curated Halal opportunities. |
+| **`Farmer/farmer.html`** | **Farmer Management Portal** | Producer workspace: project listing, funding milestones, harvest progress logs, IoT sensor feeds, direct marketplace sales, and interest-free disbursement tracking. |
+| **`Admin/admin.html`** | **Platform Admin & Compliance Console** | Executive console: agricultural project approvals, NID verification, financial escrow oversight, anti-fraud anomaly detection, and immutable audit logs. |
 | **`marketplace.html`** | **Public Marketplace Storefront** | Full-screen village marketplace storefront featuring 100 authentic Bangladeshi products in Taka (৳), search autocomplete, flash deals timer, and cart drawer. |
 | **`orders.html`** | **Marketplace Order Tracking** | Displays real-time order tracking with multi-stage delivery timelines (🚚 On The Way / In Transit, Delivered, Cancelled). |
-| **`login.html`** & **`register.html`** | **Authentication Portal** | Secure login and sign-up with a 1-Click Demo Login button for rapid examination and grading. |
+| **`login.html`** & **`register.html`** | **Authentication Portal** | Secure login and sign-up with a 1-Click Demo Login button for rapid examination and grading across all user roles. |
+| **`backend/`** | **Enterprise NestJS API & Services** | Production backend with Prisma ORM, PostgreSQL, Redis, BullMQ queues, Winston audit logger, Base Sepolia blockchain escrow contracts, and REST API. |
 
 ---
 

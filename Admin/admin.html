@@ -21,7 +21,7 @@
   <!-- ============ ADMIN SIGN IN ============ -->
   <div id="authScreen" class="auth auth--admin">
     <aside class="auth__brand">
-      <div class="brand">
+      <a href="../index.html" class="brand" title="Return to Main Portal" style="text-decoration:none; color:inherit;">
         <span class="brand__mark" aria-hidden="true">
           <svg viewBox="0 0 32 32" width="28" height="28">
             <path d="M16 29c0-8 4-13 11-15-1 9-5 14-11 15Z" fill="#6FBF73" />
@@ -31,7 +31,7 @@
           </svg>
         </span>
         <span class="brand__name">Grambandhan</span>
-      </div>
+      </a>
       <h1 class="auth__headline">Admin console</h1>
       <p class="auth__sub">Approvals, money movement, verification and fraud monitoring for the whole platform. Every
         action here is written to the audit log.</p>
@@ -189,6 +189,7 @@
         <span id="topMeta">Platform administrator</span>
       </div>
       <div class="topbar__right">
+        <a href="../index.html" class="btn btn--ghost btn--sm" style="text-decoration:none; padding: 6px 12px; font-size:12px; border-radius:6px; margin-right:8px; border:1px solid #ddd; display:inline-flex; align-items:center; gap:4px;">🌐 Main Portal</a>
         <input class="search" id="globalSearch" type="search" placeholder="Search projects, users, transactions…"
           aria-label="Search">
         <button class="icobtn" id="bellBtn" aria-label="Alerts">🔔<span class="dot" id="bellDot" hidden></span></button>

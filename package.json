@@ -1,12 +1,23 @@
 {
-  "name": "grambandhan-tasfi-ecosystem",
+  "name": "grambandhan-ecosystem",
   "private": true,
-  "version": "1.0.0",
+  "version": "2.0.0",
+  "description": "GramBandhan (গ্রামীণ বন্ধন) — Enterprise Shariah-Compliant Agro-Fintech, AI Risk Modeling & Rural Marketplace Monorepo",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "dev:frontend": "vite",
+    "dev:backend": "npm --prefix backend run dev",
+    "start:backend": "npm --prefix backend run start:dev",
+    "build:frontend": "vite build",
+    "build:backend": "npm --prefix backend run build",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test:backend": "npm --prefix backend run test",
+    "lint:backend": "npm --prefix backend run lint",
+    "prisma:generate": "npm --prefix backend run prisma:generate",
+    "prisma:migrate": "npm --prefix backend run prisma:migrate",
+    "prisma:seed": "npm --prefix backend run prisma:seed"
   },
   "devDependencies": {
     "typescript": "^5.4.5",
