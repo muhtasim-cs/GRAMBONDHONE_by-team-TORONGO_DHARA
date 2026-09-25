@@ -142,6 +142,18 @@ graph TB
 
 ---
 
+### 🌐 Global Codebase Dependency & Call Network
+
+The topological universe illustrates complete systemic interconnectivity spanning the Next.js presentation tier, NestJS domain services, Prisma ORM data layer, Solidity smart contract ABIs, and asynchronous BullMQ event pipelines.
+
+<p align="center">
+  <img src="docs/assets/global-codebase-dependency-network.png" alt="Global Codebase Dependency & Call Network" width="100%" />
+  <br />
+  <em><b>Figure 1:</b> Full-spectrum Force-Directed Dependency & Flow Graph computed via Graphify (AST parsing over 250+ modules). Nodes represent modules, controllers, and services; edges denote runtime injections, type dependencies, and on-chain RPC calls.</em>
+</p>
+
+---
+
 ### 🔄 End-to-End Mudarabah Deal Lifecycle Sequence Diagram
 
 ```mermaid
@@ -249,12 +261,12 @@ GramBandhan provides four dedicated role-specific portals unified under a seamle
 
 | Subsystem Portal | Primary Route / File | Target Actor | Core Capabilities & Key Modules |
 | :--- | :--- | :--- | :--- |
-| **🌐 Public Landing & SDG Hub** | [`index.html`](file:///C:/Users/binsa/.gemini/antigravity-ide/scratch/GRAMBONDHONE_conflict_fix/index.html)<br/>[`homepage.html`](file:///C:/Users/binsa/.gemini/antigravity-ide/scratch/GRAMBONDHONE_conflict_fix/homepage.html) | Global Public & Donors | 2.0s continuous Bangladeshi agricultural hero slideshow, Halal investment spotlights, dual-track "How It Works" roadmap, interactive 3D UN SDG flip cards (Goals 1, 2, 8, 9, 13). |
-| **💼 Investor Portal & AI Radar** | [`investor.html`](file:///C:/Users/binsa/.gemini/antigravity-ide/scratch/GRAMBONDHONE_conflict_fix/investor.html)<br/>[`investor_dashboard.html`](file:///C:/Users/binsa/.gemini/antigravity-ide/scratch/GRAMBONDHONE_conflict_fix/investor_dashboard.html) | Conscious Investors | Real-time portfolio KPIs, 30 verified project cards, bilingual Mudarabah calculator, satellite NDVI radar, 2×2 compact double-entry ledger, IBBL & MFS payout routing. |
-| **🌱 Farmer Operations Portal** | [`Farmer/farmer.html`](file:///C:/Users/binsa/.gemini/antigravity-ide/scratch/GRAMBONDHONE_conflict_fix/Farmer/farmer.html) | Rural Farmers & Women Collectives | Project submission wizard, photo upload for harvest proof, crop stage tracking (transplanting, weeding, harvest), wallet balance, interest-free payout requests. |
-| **🛡️ Admin & Compliance Console** | [`Admin/admin.html`](file:///C:/Users/binsa/.gemini/antigravity-ide/scratch/GRAMBONDHONE_conflict_fix/Admin/admin.html) | Platform Officers & Auditors | Multi-tier KYC approval queue, smart contract escrow release triggers, automated fraud anomaly flags, role-based access management, immutable audit logs. |
-| **🛒 Village Marketplace & Store** | [`marketplace.html`](file:///C:/Users/binsa/.gemini/antigravity-ide/scratch/GRAMBONDHONE_conflict_fix/marketplace.html)<br/>[`orders.html`](file:///C:/Users/binsa/.gemini/antigravity-ide/scratch/GRAMBONDHONE_conflict_fix/orders.html) | Rural Buyers & Consumers | 100 authentic Bangladeshi rural commodities (Chinigura rice, mustard honey, Nakshi Kantha), instant search autocomplete, category chips, slide-out cart, live delivery timelines. |
-| **🤖 Bondhon AI Chatbot** | [`src/chatbot.ts`](file:///C:/Users/binsa/.gemini/antigravity-ide/scratch/GRAMBONDHONE_conflict_fix/src/chatbot.ts) | All Platform Users | Native dual-language (Bengali/English) NLP assistant: answers Shariah Mudarabah rules, risk mitigation policies, project queries, and budget recommendations. |
+| **🌐 Public Landing & SDG Hub** | [`index.html`](index.html)<br/>[`homepage.html`](homepage.html) | Global Public & Donors | 2.0s continuous Bangladeshi agricultural hero slideshow, Halal investment spotlights, dual-track "How It Works" roadmap, interactive 3D UN SDG flip cards (Goals 1, 2, 8, 9, 13). |
+| **💼 Investor Portal & AI Radar** | [`investor.html`](investor.html)<br/>[`investor_dashboard.html`](investor_dashboard.html) | Conscious Investors | Real-time portfolio KPIs, 30 verified project cards, bilingual Mudarabah calculator, satellite NDVI radar, 2×2 compact double-entry ledger, IBBL & MFS payout routing. |
+| **🌱 Farmer Operations Portal** | [`Farmer/farmer.html`](Farmer/farmer.html) | Rural Farmers & Women Collectives | Project submission wizard, photo upload for harvest proof, crop stage tracking (transplanting, weeding, harvest), wallet balance, interest-free payout requests. |
+| **🛡️ Admin & Compliance Console** | [`Admin/admin.html`](Admin/admin.html) | Platform Officers & Auditors | Multi-tier KYC approval queue, smart contract escrow release triggers, automated fraud anomaly flags, role-based access management, immutable audit logs. |
+| **🛒 Village Marketplace & Store** | [`marketplace.html`](marketplace.html)<br/>[`orders.html`](orders.html) | Rural Buyers & Consumers | 100 authentic Bangladeshi rural commodities (Chinigura rice, mustard honey, Nakshi Kantha), instant search autocomplete, category chips, slide-out cart, live delivery timelines. |
+| **🤖 Bondhon AI Chatbot** | [`src/chatbot.ts`](src/chatbot.ts) | All Platform Users | Native dual-language (Bengali/English) NLP assistant: answers Shariah Mudarabah rules, risk mitigation policies, project queries, and budget recommendations. |
 
 ---
 
