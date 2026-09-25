@@ -30,8 +30,6 @@ export default defineConfig({
         marketplace: resolve(__dirname, 'marketplace.html'),
         orders: resolve(__dirname, 'orders.html'),
         register: resolve(__dirname, 'register.html'),
-        admin: resolve(__dirname, 'Admin/admin.html'),
-        farmer: resolve(__dirname, 'Farmer/farmer.html'),
       }
     }
   }
