@@ -1,7 +1,7 @@
 /**
  * =========================================================================
  * GRAMBONDHON AI CHATBOT (বন্ধন এআই)
- * Imported from https://github.com/muhtasim-cs/jony_gm.new
+ 
  * Features:
  *  - 💰 Invest in verified cohorts with interactive cards
  *  - 📊 Portfolio and field monitoring table
