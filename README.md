@@ -1,4 +1,4 @@
-# 🌾 GramBandhan (গ্রামীণ বন্ধন) — Landing Page, Investor Portal & AI Chatbot
+# 🌾 GramBondhon (গ্রামীণ বন্ধন) — Landing Page, Investor Portal & AI Chatbot
 ### Official Project Repository for Tasfi (`Tasfi_today`)
 
 **Student Name / Module Owner**: Tasfi  
