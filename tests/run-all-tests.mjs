@@ -1,6 +1,6 @@
 /**
  * =========================================================================
- * GRAMBANDHAN (গ্রামীণ বন্ধন) — ENTERPRISE TEST SUITE & VERIFICATION RUNNER
+ * GRAMBANDHAN (গ্রাম বন্ধন) — ENTERPRISE TEST SUITE & VERIFICATION RUNNER
  * Evaluates All Core Subsystems:
  *   1. Dual-Authentication & Cryptographic Nonce Security (9 Endpoints)
  *   2. Live Backend REST API, Shariah Deals & Blockchain Status (6 Endpoints)
@@ -96,7 +96,7 @@ function fetchJson(path, options = {}) {
 }
 
 console.log(`\n${colors.bright}${colors.green}🌾 =========================================================================${colors.reset}`);
-console.log(`${colors.bright}${colors.green}   GRAMBANDHAN (গ্রামীণ বন্ধন) — AUTOMATED ECOSYSTEM TEST SUITE${colors.reset}`);
+console.log(`${colors.bright}${colors.green}   GRAMBANDHAN (গ্রাম বন্ধন) — AUTOMATED ECOSYSTEM TEST SUITE${colors.reset}`);
 console.log(`${colors.dim}   Timestamp: ${new Date().toISOString()} | Environment: Node.js ${process.version}${colors.reset}`);
 console.log(`${colors.bright}${colors.green}=========================================================================${colors.reset}\n`);
 
