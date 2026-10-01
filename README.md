@@ -1,5 +1,5 @@
 # 🌾 GramBandhan: A Decentralized Milestone-Escrow and Double-Entry Ledger Framework for Transparent Agricultural Finance and Automated Profit Settlement
-### গ্রামীণ বন্ধন — An Enterprise Shariah-Compliant Agro-FinTech, AI Geospatial Risk Modeling & Decentralized Rural Producer Ecosystem
+### গ্রাম বন্ধন — An Enterprise Shariah-Compliant Agro-FinTech, AI Geospatial Risk Modeling & Decentralized Rural Producer Ecosystem
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.4-blue.svg?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![NestJS](https://img.shields.io/badge/NestJS-10.3-E0234E.svg?logo=nestjs&logoColor=white)](https://nestjs.com/)
@@ -34,7 +34,7 @@
 ### 📖 Abstract
 In developing agrarian economies such as Bangladesh, smallholder farmers and cottage artisans face systemic capital exclusion. Conventional microfinance institutions (MFIs) frequently charge effective annual percentage rates (APR) exceeding **25% to 42%**, exacerbating rural debt cycles and insolvency upon adverse weather events. Conversely, conventional commercial banks demand institutional collateral and formal audited balance sheets that 98% of smallholders cannot supply.
 
-**GramBandhan (গ্রামীণ বন্ধন)** introduces an end-to-end socio-technical platform resolving this market failure. The platform operationalizes Islamic **Mudarabah** (*profit-and-loss sharing*) equity financing, algorithmic satellite remote-sensing risk underwriting, and a direct-to-consumer rural marketplace. By pairing satellite-derived **Normalized Difference Vegetation Index (NDVI)** and meteorological precipitation indexes with automated smart contract escrow milestones on **Base Sepolia**, GramBandhan creates a verifiable, interest-free financing loop:
+**GramBandhan (গ্রাম বন্ধন)** introduces an end-to-end socio-technical platform resolving this market failure. The platform operationalizes Islamic **Mudarabah** (*profit-and-loss sharing*) equity financing, algorithmic satellite remote-sensing risk underwriting, and a direct-to-consumer rural marketplace. By pairing satellite-derived **Normalized Difference Vegetation Index (NDVI)** and meteorological precipitation indexes with automated smart contract escrow milestones on **Base Sepolia**, GramBandhan creates a verifiable, interest-free financing loop:
 
 $$\text{Conscious Investors (Rabb-ul-Mal)} \xrightarrow{\text{Mudarabah Capital}} \text{Rural Farmers (Mudarib)} \xrightarrow{\text{Smart Escrow \& Cultivation}} \text{Mandi \& Consumer Marketplace} \xrightarrow{\text{Revenue}} \text{Automated Profit Share}$$
 
