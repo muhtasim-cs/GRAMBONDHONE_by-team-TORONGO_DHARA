@@ -1,7 +1,7 @@
 # 🧪 GramBandhan — Enterprise Testing & Demonstration Master Guide
 
 > **Official Evaluation & Presentation Reference Manual**  
-> **Platform:** GramBandhan (গ্রামীণ বন্ধন) — Shariah-Compliant Agro-FinTech, AI Risk Modeling & Rural Marketplace Collective  
+> **Platform:** GramBandhan (গ্রাম বন্ধন) — Shariah-Compliant Agro-FinTech, AI Risk Modeling & Rural Marketplace Collective  
 > **Blockchain Network:** Base Sepolia Testnet (EVM Chain ID `84532`)  
 > **Test Suite Coverage:** 26/26 Test Cases Passed (100% Green Scorecard)  
 > **Repository:** Monorepo Workspace (`apps/web`, `backend`, `contracts`, `packages/blockchain-sdk`)
@@ -55,7 +55,7 @@ npm run test:auth
 
 ```text
 🌾 =========================================================================
-   GRAMBANDHAN (গ্রামীণ বন্ধন) — AUTOMATED ECOSYSTEM TEST SUITE
+   GRAMBANDHAN (গ্রাম বন্ধন) — AUTOMATED ECOSYSTEM TEST SUITE
 =========================================================================
 
 ▶ SUITE 1: Dual-Authentication & Cryptographic Security (9 Endpoints)
