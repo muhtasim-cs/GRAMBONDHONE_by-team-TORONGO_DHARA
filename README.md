@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/assets/grambandhan-hero-banner.png" alt="GramBandhan Hero Banner" width="100%" />
+</p>
+
 # GramBandhan: A Decentralized Milestone-Escrow and Double-Entry Ledger Framework for Transparent Agricultural Finance and Automated Profit Settlement
 ### গ্রাম বন্ধন — An Enterprise Shariah-Compliant Agro-FinTech, AI Geospatial Risk Modeling & Decentralized Rural Producer Ecosystem
 
