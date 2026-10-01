@@ -1,4 +1,4 @@
-# 🌾 GramBandhan: A Decentralized Milestone-Escrow and Double-Entry Ledger Framework for Transparent Agricultural Finance and Automated Profit Settlement
+# GramBandhan: A Decentralized Milestone-Escrow and Double-Entry Ledger Framework for Transparent Agricultural Finance and Automated Profit Settlement
 ### গ্রাম বন্ধন — An Enterprise Shariah-Compliant Agro-FinTech, AI Geospatial Risk Modeling & Decentralized Rural Producer Ecosystem
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.4-blue.svg?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
