@@ -1,4 +1,4 @@
-# 🌾 GramBandhan (গ্রামীণ বন্ধন) — Formal Test Case Execution & Quality Assurance Report
+# 🌾 GramBandhan (গ্রাম বন্ধন) — Formal Test Case Execution & Quality Assurance Report
 
 ```
 =========================================================================
@@ -141,7 +141,7 @@ node tests/run-all-tests.mjs
 ### ✅ Expected Console Verification Output:
 ```text
 🌾 =========================================================================
-   GRAMBANDHAN (গ্রামীণ বন্ধন) — AUTOMATED ECOSYSTEM TEST SUITE
+   GRAMBANDHAN (গ্রাম বন্ধন) — AUTOMATED ECOSYSTEM TEST SUITE
 =========================================================================
    ● Auth            : 9/9 Passed (100%)
    ● Backend         : 6/6 Passed (100%)
@@ -161,7 +161,7 @@ node tests/run-all-tests.mjs
 ```
 Evaluator / Supervisor : ____________________________________________
 Institution / Faculty  : Department of Computer Science & Engineering
-Project Title          : GramBandhan (গ্রামীণ বন্ধন) Decentralized Agri-FinTech
+Project Title          : GramBandhan (গ্রাম বন্ধন) Decentralized Agri-FinTech
 Verdict                : [ X ] APPROVED & VERIFIED (100% Pass Rate)
 Date                   : 30 September 2026
 ```
