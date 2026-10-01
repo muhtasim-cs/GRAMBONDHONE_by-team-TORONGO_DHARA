@@ -36,7 +36,7 @@ In developing agrarian economies such as Bangladesh, smallholder farmers and cot
 
 **GramBandhan (গ্রাম বন্ধন)** introduces an end-to-end socio-technical platform resolving this market failure. The platform operationalizes Islamic **Mudarabah** (*profit-and-loss sharing*) equity financing, algorithmic satellite remote-sensing risk underwriting, and a direct-to-consumer rural marketplace. By pairing satellite-derived **Normalized Difference Vegetation Index (NDVI)** and meteorological precipitation indexes with automated smart contract escrow milestones on **Base Sepolia**, GramBandhan creates a verifiable, interest-free financing loop:
 
-$$\text{Conscious Investors (Rabb-ul-Mal)} \xrightarrow{\text{Mudarabah Capital}} \text{Rural Farmers (Mudarib)} \xrightarrow{\text{Smart Escrow \& Cultivation}} \text{Mandi \& Consumer Marketplace} \xrightarrow{\text{Revenue}} \text{Automated Profit Share}$$
+$$\text{Conscious Investors (Rabb-ul-Mal)} \xrightarrow{\text{Mudarabah Capital}} \text{Rural Farmers (Mudarib)} \xrightarrow{\text{Smart Escrow and Cultivation}} \text{Mandi and Consumer Marketplace} \xrightarrow{\text{Revenue}} \text{Automated Profit Share}$$
 
 The system encompasses **four primary portal actors**:
 1. **Ethical Investors**: Project discovery across 30 verified campaigns, predictive AI yield radar, and GAAP double-entry ledger tracking.
