@@ -6,7 +6,7 @@
 
 ## 1. Project Overview & Architecture
 
-**GramBandhan (গ্রামীণ বন্ধন)** is an ethical FinTech and rural commerce platform connecting global conscious investors with local agricultural collectives and village women artisans across Bangladesh under fair Shariah-compliant **Mudarabah** profit sharing.
+**GramBndhOn (গ্রামবন্ধন)** is an ethical FinTech and rural commerce platform connecting global conscious investors with local agricultural collectives and village women artisans across Bangladesh under fair Shariah-compliant **Mudarabah** profit sharing.
 
 ### 🔄 Core Ecosystem Flow:
 $$\text{INVESTORS} \xrightarrow{\text{Mudarabah Capital}} \text{RURAL PRODUCERS} \xrightarrow{\text{Harvest \& Production}} \text{MARKETPLACE} \xrightarrow{\text{Wholesale \& Retail}} \text{ETHICAL PROFIT SHARE}$$
