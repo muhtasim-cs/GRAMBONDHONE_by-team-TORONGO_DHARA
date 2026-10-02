@@ -1,4 +1,4 @@
-# 🌾 GramBandhan (গ্রামীণ বন্ধন) - Project & Teacher Explanation Guide
+# 🌾 GramBOndhOn (গ্রামবন্ধন) - Project & Teacher Explanation Guide
 **Student Name / Module Owner**: Tasfi  
 **Assigned Scope**: Homepage, Hero Section, Marketplace, and Investor Ecosystem (Dashboard, Projects, Financials, AI Risk, Profile)
 
