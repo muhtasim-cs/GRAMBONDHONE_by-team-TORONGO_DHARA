@@ -1,6 +1,6 @@
 /**
  * =========================================================================
- * GRAMBANDHAN (গ্রাম বন্ধন) — ENTERPRISE TEST SUITE & VERIFICATION RUNNER
+ * GRAMBONDHON (গ্রাম বন্ধন) — ENTERPRISE TEST SUITE & VERIFICATION RUNNER
  * Evaluates All Core Subsystems:
  *   1. Dual-Authentication & Cryptographic Nonce Security (9 Endpoints)
  *   2. Live Backend REST API, Shariah Deals & Blockchain Status (6 Endpoints)
